@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>FM Dev</title>
+    <style>
+        
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.tesla-burger').onclick = function () {
+                document.querySelector('.tesla-mobile-nav').classList.add('open');
+            };
+            document.querySelector('.tesla-close').onclick = function () {
+                document.querySelector('.tesla-mobile-nav').classList.remove('open');
+            };
+            document.addEventListener('click', function (e) {
+                const nav = document.querySelector('.tesla-mobile-nav');
+                if (nav.classList.contains('open') && !nav.contains(e.target) && !e.target.classList.contains('tesla-burger')) {
+                    nav.classList.remove('open');
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <main>
+        <header class="tesla-header">
+            <div class="tesla-logo">
+                <a href="#"><img src="images/logo.png" alt="Tesla Logo" /></a>
+            </div>
+            <nav class="tesla-nav">
+                <ul>
+                    <li><a href="#">Vehicles</a></li>
+                    <li><a href="#">Energy</a></li>
+                    <li><a href="#">Charging</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </nav>
+            <div class="tesla-icons">
+                <img src="assets/icons/question-circle.svg" alt="Help" />
+                <img src="assets/icons/globe.svg" alt="Lang" />
+                <img src="assets/icons/person.svg" alt="Account" />
+            </div>
+            <button class="tesla-burger" aria-label="Menu">&#9776;</button>
+            <nav class="tesla-mobile-nav">
+                <button class="tesla-close" aria-label="Close">&times;</button>
+                <ul>
+                    <li><a href="#">Vehicles</a></li>
+                    <li><a href="#">Energy</a></li>
+                    <li><a href="#">Charging</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li class="tesla-lang">
+                        <img src="assets/icons/globe.svg" alt="Lang" />
+                        <a href="">
+                            <span>Cameroon</span> <br>
+                            <i>French</i>
+                        </a>
+                    </li>
+                    <li class="tesla-account">
+                        <img src="assets/icons/person.svg" alt="Account" />
+                        <a href="#">Account</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="banner">
+            <h1>Made in America</h1>
+            <p>Free Red, White or Blue Paint'</p>
+            <div class="hero-btn">
+                <button class="btn-info">Order Model Y</button>
+                <button class="btn-white">View Inventory</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

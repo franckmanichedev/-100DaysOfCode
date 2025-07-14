@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: Helvetica, sans-serif;
+    color: black;
+}
+
+main {
+    background-color: purple;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.btn-info {
+    background-color: rgb(0, 102, 255);
+    color: white;
+}
+
+.btn-white {
+    background-color: white;
+    color: rgb(73, 73, 73);
+}
+
+/* 
+    HEADER
+*/
+
+.tesla-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5vw;
+    height: 56px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+.tesla-logo img {
+    height: 25px;
+}
+
+.tesla-nav ul {
+    display: flex;
+    gap: 2vw;
+    list-style: none;
+}
+
+.tesla-nav ul li a {
+    color: #222;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.tesla-nav ul li a:hover {
+    background: #f2f2f2;
+}
+
+.tesla-icons {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.tesla-icons img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.tesla-burger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+.tesla-mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(.4, 0, .2, 1);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0 0 0;
+}
+
+.tesla-mobile-nav.open {
+    transform: translateX(0);
+}
+
+.tesla-mobile-nav .tesla-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    align-self: flex-end;
+    margin: 0 20px 20px 0;
+    cursor: pointer;
+    padding: 0;
+    width: auto;
+}
+
+.tesla-mobile-nav ul {
+    list-style: none;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.tesla-mobile-nav ul li a {
+    color: #222;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.tesla-mobile-nav ul li a:hover {
+    background: #f2f2f2;
+}
+
+.tesla-lang,
+.tesla-account{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.tesla-lang a {
+    color: #222;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.tesla-lang i {
+    font-size: 12px;
+}
+
+.tesla-mobile-nav ul li img {
+    width: 22px;
+    height: 22px;
+}
+
+@media (max-width: 900px) {
+    .tesla-nav {
+        display: none;
+    }
+
+    .tesla-icons {
+        display: none;
+    }
+
+    .tesla-burger {
+        display: block;
+        padding: 0;
+        width: auto;
+    }
+}
+
+/* 
+    BANNER
+*/
+.banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../images/promo/Homepage-Promotional-Carousel-Made-in-America-Desktop.png');
+    background-position: center;
+    background-size: cover;
+    height: 72vh;
+    gap: 5px;
+}
+
+.banner h1{
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+    font-size: 60px;
+}
+
+.banner p {
+    color: white;
+    font-weight: bold;
+}
+
+.banner .hero-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2em;
+}
+
+button {
+    padding: 15px 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .banner {
+        padding: 25px 10px;
+    }
+    .banner h1 {
+        text-align: center;
+        margin-top: 18px;
+        color: white;
+        font-size: 50px;
+    }
+    .banner .hero-btn {
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 2em;
+    }
+    button{
+        width: 150px;
+    }
+}
