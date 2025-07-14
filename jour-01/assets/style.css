@@ -7,7 +7,6 @@
 }
 
 main {
-    background-color: purple;
     width: 100%;
 }
 
@@ -247,4 +246,227 @@ button {
     button{
         width: 150px;
     }
+}
+
+/* CARD ONE */
+#caroussel,
+#other-product{
+    background-color: white;
+    padding: 50px;
+}
+
+.carousel-container .carousel-track{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    gap: 25px;
+}
+
+#caroussel .carousel-container .carousel-track .carousel-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../images/card/Homepage-Card-Model-Y-Desktop-US.png');
+    background-position: center;
+    background-size: cover;
+    padding: 25px 50px;
+    border: none;
+    border-radius: 10px;
+    height: 75vh;
+    width: 70vw;
+}
+
+.carousel-container .carousel-track .carousel-card h1{
+    color: white;
+    font-size: 17px;
+}
+
+.carousel-container .carousel-track .carousel-card h2 {
+    color: white;
+    font-size: 50px;
+}
+
+.carousel-container .carousel-track .carousel-card p {
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+    width: 10em;
+    font-size: 20px;
+    margin: 2px 0 25px;
+}
+
+/* GRID SYSTEM */
+
+#grid {
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.grid {
+    background-color: rgb(236, 236, 236);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    height: auto;
+    width: 50%;
+}
+
+.grid .text-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-direction: column;
+    padding: 25px 50px;
+}
+
+#grid .grid img {
+    width: 200px;
+    height: auto;
+    border-radius: 0 10px 10px 0;
+}
+
+.grid .text-grid h1 {
+    font-size: 30px;
+    color: black;
+}
+
+.grid .text-grid p {
+    font-size: 18px;
+    color: rgb(95, 95, 95);
+}
+
+/* WORLDWIDE */
+#worldwide {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 25px;
+    background-color: white;
+    padding: 50px;
+}
+
+#worldwide .card-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../images/card/Homepage-Card-Model-Y-Desktop-US.png');
+    background-position: center;
+    background-size: cover;
+    padding: 25px 50px;
+    border: none;
+    border-radius: 10px;
+    height: 75vh;
+    width: 55vw;
+}
+
+#worldwide .card-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-image: url('../images/world/Homepage-Worlds-First-Autonomous-Car-Delivery-Desktop.png');
+    background-position: center;
+    background-size: cover;
+    padding: 25px 50px;
+    border: none;
+    border-radius: 10px;
+    height: 75vh;
+    width: 25vw;
+}
+
+#worldwide .card-one img{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-color: rgb(168, 168, 168);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    width: 35px;
+}
+
+#worldwide .card-one h2,
+#worldwide .card-two h2{
+    color: white;
+    font-size: 50px;
+    padding-bottom: 25px;
+}
+
+/* 
+    SOLAR PANEL
+*/
+#other-product .carousel-container .carousel-track .carousel-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-image: url('../images/card/Homepage-Card-Solar-Panels-Desktop.png');
+    background-position: center;
+    background-size: cover;
+    padding: 25px 50px;
+    border: none;
+    border-radius: 10px;
+    height: 75vh;
+    width: 70vw;
+}
+
+#other-product .carousel-container .carousel-track .carousel-card p {
+    color: white;
+    border-bottom: none;
+    padding-bottom: 2px;
+    width: 100%;
+    font-size: 20px;
+    margin: 2px 0 25px;
+}
+
+/* 
+    FOOTER
+*/
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 25px 50px;
+}
+
+.footer-text,
+.link {
+    padding: 25px 10em;
+}
+
+footer .footer-text ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+footer .footer-text ul span {
+    font-size: 10px;
+}
+
+.link {
+    margin: 2em 0;
+}
+
+.link .footer-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.link .footer-nav ul li a {
+    color: #444;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
 }
