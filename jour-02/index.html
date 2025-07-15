@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CV en ligne, profil développeur web fullstack, stacks, bio, expérience, responsive.">
     <link rel="stylesheet" href="assets/css/styles.css">
     <title>Profil Développeur - FM Dev</title>
 </head>
@@ -11,19 +13,38 @@
         <section id="profil">
             <div class="profil-information">
                 <div class="name">
-                    <h1>SONFACK FRANCK MANICHE</h1>
-                    <h2>Développeur Web FullStack PHP</h2>
+                    <h1 tabindex="0">SONFACK FRANCK MANICHE</h1>
+                    <h2 tabindex="0">Développeur Web FullStack PHP</h2>
                 </div>
                 <div class="description">
                     <p>
-                        Développeur passionnée par les nouvelles technologies et solutions
-                        web innovants, je suis capable de travailler en collaboration avec
-                        des clients pour comprendre leurs besoins et offrir des solutions
-                        personnalisées.
+                        Développeur passionné par les nouvelles technologies et solutions web innovantes, je travaille en collaboration avec les clients pour comprendre leurs besoins et offrir des solutions personnalisées.
+                    </p>
+                </div>
+                <ul class="stacks" aria-label="Stacks techniques">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>Laravel</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+                <div class="action-buttons">
+                    <a href="https://github.com/" target="_blank" rel="noopener" class="btn-action github" aria-label="GitHub">GitHub</a>
+                    <a href="https://facebook.com/" target="_blank" rel="noopener" class="btn-action facebook" aria-label="Facebook">Facebook</a>
+                    <a href="#" class="btn-action cv" aria-label="Télécharger CV">Télécharger CV</a>
+                </div>
+                <button id="show-bio-btn" class="btn-action" style="margin-top:10px;" aria-controls="bio-longue">Voir la bio longue</button>
+                <div class="bio-longue" id="bio-longue" style="display:none;">
+                    <h2>Bio longue</h2>
+                    <p>
+                        Je suis un développeur web fullstack passionné par la création de solutions numériques innovantes. Avec une solide expérience en HTML, CSS, JavaScript, PHP, et des frameworks modernes comme Laravel et React, j'aime relever des défis techniques et collaborer avec des équipes pluridisciplinaires. Mon parcours m'a permis de travailler sur des projets variés, allant de la conception de sites vitrines à des applications web complexes. Curieux et toujours en veille technologique, je m'investis dans l'apprentissage continu pour rester à la pointe des évolutions du web.
                     </p>
                 </div>
             </div>
-            <img src="assets/images/IMG-20240829-WA0025.jpg" alt="My-Picture" width="100px">
+            <img src="assets/images/IMG-20240829-WA0025.jpg" alt="Photo de SONFACK FRANCK MANICHE" width="180" height="180" loading="lazy" decoding="async">
         </section>
         <section id="skills-experience">
             <div class="skills">
@@ -133,18 +154,19 @@
         </section>
         <section id="footer">
             <div class="number">
-                <img src="assets/icons/phone.svg" alt="">
-                <p>(+237) 653 954 179</p>
+                <img src="assets/icons/phone.svg" alt="Téléphone">
+                <a href="tel:+237653954179">(+237) 653 954 179</a>
             </div>
             <div class="email">
-                <img src="assets/icons/envelope.svg" alt="">
-                <p>franckmaniche6@gmail.com</p>
+                <img src="assets/icons/envelope.svg" alt="Email">
+                <a href="mailto:franckmaniche6@gmail.com">franckmaniche6@gmail.com</a>
             </div>
             <div class="web-site">
-                <img src="assets/icons/globe.svg" alt="">
-                <p>https://personal-portfolio-steel-mu-35.vercel.app/</p>
+                <img src="assets/icons/globe.svg" alt="Site web">
+                <a href="https://personal-portfolio-steel-mu-35.vercel.app/" target="_blank" rel="noopener">https://personal-portfolio-steel-mu-35.vercel.app/</a>
             </div>
         </section>
     </main>
+    <script src="assets/script.js" defer></script>
 </body>
 </html>
