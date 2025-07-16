@@ -1,0 +1,538 @@
+:root {
+    --tiktok-red: #FE2C55;
+    --tiktok-blue: #25F4EE;
+    --facebook-blue: #1877F2;
+    --telegram-blue: #0088CC;
+    --whatsapp-green: #25D366;
+    --messenger-purple: #006AFF;
+    --meta-blue: #0084FF;
+    --meta-green: #00C6FF;
+    --meta-purple: #7B00FF;
+    --meta-pink: #FF00C3;
+    --meta-orange: #FF4500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2.2rem;
+    background: linear-gradient(90deg, #FE2C55, #25F4EE, #1877F2, #0088CC, #25D366);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.platform-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.platform-section {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    padding: 25px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.platform-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.platform-logo {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.platform-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.loaders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.loader-card {
+    background: #fbfbfb;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.loader-card:hover {
+    transform: translateY(-5px);
+}
+
+.loader-name {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Meta AI */
+.meta-circle {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.meta-wheel-small{
+    width: 15px;
+    height: 15px;
+}
+
+.meta-wheel {
+    width: 160px;
+    height: 160px;
+}
+
+.meta-wheel,
+.meta-wheel-small{
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        #0064e0,
+        #0082fb,
+        #7f00ff,
+        #0064e0
+    );
+    mask: radial-gradient(circle, transparent 55%, black 56%);
+    -webkit-mask: radial-gradient(circle, transparent 55%, black 56%);
+    animation: rotate 4s linear infinite;
+    box-shadow:
+        0 0 20px rgba(0, 130, 251, 0.4),
+        0 0 40px rgba(127, 0, 255, 0.3),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+/* Glow + reflet */
+.meta-wheel::before,
+.meta-wheel-small:before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 60%);
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* TikTok Loaders */
+.tiktok-logo { background: linear-gradient(135deg, var(--tiktok-red), var(--tiktok-blue)); }
+
+/* 1. Double circle spinner */
+.tiktok-dual-spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.tiktok-dual-spinner .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+}
+
+.tiktok-dual-spinner .circle-1 {
+    border: 3px solid var(--tiktok-blue);
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+.tiktok-dual-spinner .circle-2 {
+    border: 3px solid var(--tiktok-red);
+    border-top-color: transparent;
+    animation: spinReverse 1.2s linear infinite;
+    right: -10px;
+    top: 10px;
+    width: 80%;
+    height: 80%;
+}
+
+/* 2. Typing indicator */
+.tiktok-typing {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.tiktok-typing .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #aaa;
+    animation: tiktokTyping 1.4s infinite ease-in-out;
+}
+
+.tiktok-typing .dot:nth-child(1) { animation-delay: 0s; }
+.tiktok-typing .dot:nth-child(2) { animation-delay: 0.2s; }
+.tiktok-typing .dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* 3. Video loading */
+.tiktok-video-loader {
+    width: 100%;
+    height: 80px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tiktok-video-loader::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    animation: tiktokShimmer 1.5s infinite;
+}
+
+/* 4. Equalizer */
+.tiktok-equalizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 32px;
+    justify-content: center;
+}
+.tiktok-equalizer .bar {
+    width: 6px;
+    height: 60%;
+    background: linear-gradient(180deg, #25F4EE, #FE2C55);
+    border-radius: 3px;
+    animation: tiktokEqualizer 1s infinite ease-in-out;
+}
+.tiktok-equalizer .bar:nth-child(1) { animation-delay: 0s; }
+.tiktok-equalizer .bar:nth-child(2) { animation-delay: 0.2s; }
+.tiktok-equalizer .bar:nth-child(3) { animation-delay: 0.4s; }
+.tiktok-equalizer .bar:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes tiktokEqualizer {
+    0%, 100% { height: 60%; }
+    50% { height: 100%; }
+}
+
+/* Boulent qui tournent */
+.tiktok-balls-loader {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    margin: 0 auto;
+    perspective: 100px;
+}
+.tiktok-balls-loader .ball {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: tiktokBallsOrbit 1.2s cubic-bezier(.77,0,.18,1) infinite;
+    will-change: transform, z-index;
+}
+.tiktok-balls-loader .ball-blue {
+    background: #25F4EE;
+    z-index: 2;
+    animation-delay: 0s;
+}
+.tiktok-balls-loader .ball-red {
+    background: #FE2C55;
+    z-index: 1;
+    animation-delay: 0.6s;
+}
+
+@keyframes tiktokBallsOrbit {
+    0% {
+        transform: translate(-50%, -50%) translateX(-18px) scale(1) rotateY(0deg);
+        z-index: 2;
+    }
+    25% {
+        z-index: 2;
+    }
+    49% {
+        z-index: 2;
+    }
+    50% {
+        transform: translate(-50%, -50%) translateX(18px) scale(1) rotateY(180deg);
+        z-index: 1;
+    }
+    51% {
+        z-index: 1;
+    }
+    75% {
+        z-index: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(-18px) scale(1) rotateY(360deg);
+        z-index: 2;
+    }
+}
+
+/* Facebook Loaders */
+.facebook-logo { background: var(--facebook-blue); }
+
+/* 1. Classic spinner */
+.facebook-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f0f2f5;
+    border-top-color: var(--facebook-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+/* 2. Reaction loader */
+.facebook-reaction-loader {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+}
+
+.facebook-reaction-loader .reaction {
+    width: 30px;
+    height: 30px;
+    background: #f0f2f5;
+    border-radius: 50%;
+    animation: facebookReaction 1.5s infinite ease-in-out;
+}
+
+.facebook-reaction-loader .reaction:nth-child(1) { 
+    animation-delay: 0s;
+    background: #FF7F00;
+}
+.facebook-reaction-loader .reaction:nth-child(2) { 
+    animation-delay: 0.2s;
+    background: #FF0000;
+}
+.facebook-reaction-loader .reaction:nth-child(3) { 
+    animation-delay: 0.4s;
+    background: #FFD700;
+}
+
+/* 3. Pulse Dots */
+.facebook-pulse-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+}
+.facebook-pulse-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1877F2;
+    opacity: 0.5;
+    animation: facebookPulse 1.2s infinite;
+}
+.facebook-pulse-dots .dot:nth-child(2) { animation-delay: 0.2s; }
+.facebook-pulse-dots .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes facebookPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1);}
+    50% { opacity: 1; transform: scale(1.4);}
+}
+
+/* Telegram Loaders */
+.telegram-logo { background: var(--telegram-blue); }
+
+/* 1. Wave dots */
+.telegram-wave-loader {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 40px;
+}
+
+.telegram-wave-loader .dot {
+    width: 8px;
+    background: var(--telegram-blue);
+    border-radius: 4px;
+    animation: telegramWave 1s infinite ease-in-out;
+}
+
+.telegram-wave-loader .dot:nth-child(1) { 
+    height: 15px;
+    animation-delay: 0s;
+}
+.telegram-wave-loader .dot:nth-child(2) { 
+    height: 25px;
+    animation-delay: 0.2s;
+}
+.telegram-wave-loader .dot:nth-child(3) { 
+    height: 35px;
+    animation-delay: 0.4s;
+}
+.telegram-wave-loader .dot:nth-child(4) { 
+    height: 25px;
+    animation-delay: 0.6s;
+}
+.telegram-wave-loader .dot:nth-child(5) { 
+    height: 15px;
+    animation-delay: 0.8s;
+}
+
+/* 2. Typing Bubbles */
+.telegram-plane-fly {
+    width: 40px;
+    height: 32px;
+    position: relative;
+    margin: 0 auto;
+}
+.telegram-plane-fly .plane {
+    width: 24px;
+    height: 24px;
+    background: url('data:image/svg+xml;utf8,<svg fill=\"%230088CC\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"2,21 23,12 2,3 6,12 2,21\"/></svg>') no-repeat center/contain;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: telegramPlaneFly 1.2s infinite linear;
+}
+@keyframes telegramPlaneFly {
+    0% { left: 0; top: 20px; opacity: 0; }
+    20% { opacity: 1; }
+    60% { left: 16px; top: 0; opacity: 1; }
+    100% { left: 40px; top: -10px; opacity: 0; }
+}
+
+/* WhatsApp Loaders */
+.whatsapp-logo { background: var(--whatsapp-green); }
+
+/* 1. Double tick animation */
+.whatsapp-double-tick {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.whatsapp-double-tick .tick {
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    border-left: 3px solid var(--whatsapp-green);
+    border-bottom: 3px solid var(--whatsapp-green);
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+.whatsapp-double-tick .tick-1 {
+    left: 0;
+    top: 0;
+    animation: whatsappTick 1.5s infinite;
+}
+
+.whatsapp-double-tick .tick-2 {
+    left: 8px;
+    top: 4px;
+    animation: whatsappTick 1.5s infinite 0.5s;
+}
+
+/* Keyframes */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverse {
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes tiktokTyping {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-8px); }
+}
+
+@keyframes tiktokShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(300%); }
+}
+
+@keyframes facebookReaction {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-15px) scale(1.2); }
+}
+
+@keyframes telegramWave {
+    0%, 100% { height: 15px; }
+    50% { height: 35px; }
+}
+
+@keyframes whatsappTick {
+    0%, 30% { opacity: 0; }
+    50%, 100% { opacity: 1; }
+}
+
+/* 2. Typing Bubbles */
+.whatsapp-typing-bubbles {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+}
+.whatsapp-typing-bubbles .bubble {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #25D366;
+    opacity: 0.5;
+    animation: whatsappTypingBubbles 1.2s infinite;
+}
+.whatsapp-typing-bubbles .bubble:nth-child(2) { animation-delay: 0.2s; }
+.whatsapp-typing-bubbles .bubble:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes whatsappTypingBubbles {
+    0%, 100% { opacity: 0.5; transform: translateY(0);}
+    50% { opacity: 1; transform: translateY(-8px);}
+}
