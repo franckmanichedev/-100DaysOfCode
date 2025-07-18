@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire Moderne avec Dark Mode</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Bouton Dark Mode -->
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+
+	<!-- Onglets sur mobile -->
+    <div class="mobile-tabs">
+		<button class="tab-btn active" id="tab-login">Se connecter</button>
+		<button class="tab-btn" id="tab-register">S’inscrire</button>
+    </div>
+
+	<!-- Connexion -->
+    <div class="form-container" id="login-form">
+		<form>
+			<h1>Connexion</h1>
+			<div class="social-container">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>ou utilisez votre email</span>
+			<input type="email" placeholder="Email" required />
+			<input type="password" placeholder="Mot de passe" required />
+			<a href="#">Mot de passe oublié ?</a>
+			<button type="submit">Se connecter</button>
+		</form>
+    </div>
+
+	<!-- Inscription -->
+    <div class="form-container hidden" id="register-form">
+		<form>
+			<h1>Inscription</h1>
+			<div class="social-container">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>ou utilisez votre email</span>
+			<input type="text" placeholder="Nom" required />
+			<input type="email" placeholder="Email" required />
+			<input type="password" placeholder="Mot de passe" required />
+			<button type="submit">S'inscrire</button>
+		</form>
+    </div>
+
+    <!-- Formulaire Connexion -->
+    <div class="form-container sign-in-container">
+		<form>
+			<h1>Connexion</h1>
+			<div class="social-container">
+				<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" aria-label="Google"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>ou utilisez votre email</span>
+			<input type="email" placeholder="Email" aria-label="Email" required />
+			<input type="password" placeholder="Mot de passe" aria-label="Mot de passe" required />
+			<a href="#" class="forgot-password">Mot de passe oublié ?</a>
+			<button type="submit">Se connecter</button>
+		</form>
+    </div>
+
+    <!-- Formulaire Inscription -->
+    <div class="form-container sign-up-container">
+		<form>
+			<h1>Inscription</h1>
+			<div class="social-container">
+				<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" aria-label="Google"><i class="fab fa-google-plus-g"></i></a>
+			</div>
+			<span>ou utilisez votre email</span>
+			<input type="text" placeholder="Nom" aria-label="Nom" required />
+			<input type="email" placeholder="Email" aria-label="Email" required />
+			<input type="password" placeholder="Mot de passe" aria-label="Mot de passe" required />
+			<button type="submit">S'inscrire</button>
+		</form>
+    </div>
+
+    <!-- Overlay (Dégradé + Texte) -->
+    <div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Content de vous revoir !</h1>
+				<p>Connectez-vous pour accéder à votre compte.</p>
+				<button class="ghost" id="signIn">Se connecter</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Première visite ?</h1>
+				<p>Créez un compte pour découvrir nos services.</p>
+				<button class="ghost" id="signUp">S'inscrire</button>
+			</div>
+		</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
