@@ -41,9 +41,6 @@ const tabRegister = document.getElementById('tab-register');
 const loginForm = document.getElementById('login-form');
 const registerForm = document.getElementById('register-form');
 
-const overlay = document.querySelector('.overlay');
-overlay.style.display = 'none'; // Hide overlay by default
-
 tabLogin.addEventListener('click', () => {
 	tabLogin.classList.add('active');
 	tabRegister.classList.remove('active');

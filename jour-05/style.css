@@ -323,6 +323,10 @@ button:focus-visible, input:focus-visible {
     color: var(--text-color);
   }
 
+  .overlay {
+	display: none;
+  }
+
   .tab-btn.active {
     border-bottom: 3px solid var(--primary);
   }
