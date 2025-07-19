@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Double slide d'un formulaire d'inscription/connexion - FM Dev</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+        <div class="theme-toggle">
+            <i class="fas fa-sun" id="light-theme"></i>
+            <i class="fas fa-moon" id="dark-theme"></i>
+        </div>
+        <nav>
+            <h1>Défi personnel : <span class="highlight">#100DaysOfCode</span></h1>
+            <p>Fin prévue dans :</p>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="timer-counter jours">
+                <h1>Jours</h1>
+                <span class="theme-toggle" id="jours" aria-label="Changer le thème">00</span>
+            </div>
+            <div class="timer-counter heures">
+                <h1>Heures</h1>
+                <span class="theme-toggle" id="heures" aria-label="Changer le thème">00</span>
+            </div>
+            <div class="timer-counter minutes">
+                <h1>Minutes</h1>
+                <span class="theme-toggle" id="minutes" aria-label="Changer le thème">00</span>
+            </div>
+            <div class="timer-counter secondes">
+                <h1>Secondes</h1>
+                <span class="theme-toggle" id="secondes" aria-label="Changer le thème">00</span>
+            </div>
+        </section>
+        <form class="notify-form">
+            <input type="email" placeholder="Entrez votre email" required>
+            <button type="submit">Prévenez-moi</button>
+            <div class="social-links">
+                <a href="https://github.com/ton-profil" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/ton-profil" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 #Day6 de #100DaysOfCode.</p>
+    </footer>
+
+  	<script src="script.js"></script>
+</body>
+</html>
