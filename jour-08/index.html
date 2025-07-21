@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Témoignages Clients</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="testimonials">
+        <h2>Ce que nos clients disent pour ce #Day8...</h2>
+        <div class="testimonial-container">
+            <!-- Témoignages -->
+            <div class="testimonial active">
+                <div class="quote">"Ce service a complètement transformé notre façon de travailler. Efficacité et professionnalisme remarquables !"</div>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client 1">
+                    <div>
+                        <h3>Marie Dubois</h3>
+                        <p>CEO, Entreprise A</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="quote">"Une équipe réactive et des solutions adaptées à nos besoins. Je recommande sans hésitation."</div>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 2">
+                    <div>
+                        <h3>Jean Martin</h3>
+                        <p>Directeur Marketing</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                <div class="quote">"Résultats visibles dès le premier mois. Un partenaire de confiance pour notre croissance."</div>
+                <div class="client-info">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client 3">
+                    <div>
+                        <h3>Sophie Lambert</h3>
+                        <p>Responsable Commercial</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contrôles -->
+            <button class="prev-btn" aria-label="Témoignage précédent">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn" aria-label="Témoignage suivant">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Indicateurs -->
+            <div class="indicators">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
