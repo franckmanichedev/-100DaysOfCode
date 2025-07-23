@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resto Custo (By FMDev)</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+  <!-- Ajouter cette balise dans le <head> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="logo">Resto  <span>Custo</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reservation.html">Réservation</a></li>
+      </ul>
+    </nav>
+    <div class="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Bienvenue chez <span>Resto Custo</span></h1>
+      <p>La saveur, l’élégance et la passion dans chaque bouchée.</p>
+      <a href="menu.html" class="btn">Voir le menu</a>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section class="about">
+    <h2>À propos de nous</h2>
+    <p>Chez <strong>Resto Custo</strong>, nous célébrons l’art culinaire avec des recettes authentiques et des ingrédients frais. Chaque plat est une promesse de qualité et de plaisir.</p>
+  </section>
+
+  <!-- MENU DU JOUR -->
+  <section class="menu">
+    <h2>Nos Suggestions du Jour</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://africa-cuisine.com/wp-content/uploads/2022/02/Poulet-Directeur-Ge%CC%81ne%CC%81ral.jpg" alt="Plat 1">
+        <h3>DG épicée</h3>
+        <p>4.000 FCFA</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE7uFcKrsmGRSpplpusFhXcPU3s3RrvCfgiUnPV6OCEVfWebBSp13GcTKtmnAlxV7tyB0&usqp=CAU" alt="Plat 2">
+        <h3>Ndolè Plantain</h3>
+        <p>2.500 FCFA</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://media.jemepropose.com/offers_pictures/member_935502/offer_4065307/offer_4065307_picture_1094696.png" alt="Frites">
+        <h3>Frites croustillantes</h3>
+        <p>1.500 FCFA</p>
+      </div>
+    </div>
+    <a href="menu.html" class="btn-outline">Voir tout le menu</a>
+  </section>
+
+  <!-- POURQUOI NOUS -->
+  <section class="features">
+    <h2>Pourquoi choisir Resto Custo ?</h2>
+    <div class="features-grid">
+      <div>
+        <h4>Produits frais</h4>
+        <p>Des ingrédients soigneusement sélectionnés pour une qualité irréprochable.</p>
+      </div>
+      <div>
+        <h4>Livraison rapide</h4>
+        <p>Profitez de nos plats depuis le confort de votre maison, en un clic.</p>
+      </div>
+      <div>
+        <h4>Ambiance chaleureuse</h4>
+        <p>Un cadre accueillant, parfait pour tous vos repas et événements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Témoignages -->
+  <section class="testimonials">
+      <h2>Nos Clients Témoignent</h2>
+      <div class="testimonial-container">
+          <!-- Témoignage 1 -->
+          <div class="testimonial active">
+              <div class="quote">"Le Poulet DG est tout simplement exceptionnel ! La meilleure version que j'ai goûtée à Yaoundé."</div>
+              <div class="client-info">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client 1">
+                  <div>
+                      <h3>Aïssatou Diallo</h3>
+                      <p>Cliente fidèle</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Témoignage 2 -->
+          <div class="testimonial">
+              <div class="quote">"Service rapide et plats toujours frais. Mon adresse préférée pour les déjeuners en semaine."</div>
+              <div class="client-info">
+                  <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client 2">
+                  <div>
+                      <h3>Marc Kouamé</h3>
+                      <p>Entrepreneur</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Témoignage 3 -->
+          <div class="testimonial">
+              <div class="quote">"Le Ndolè avec plantain est à tomber ! J'y emmene tous mes amis étrangers pour leur faire découvrir."</div>
+              <div class="client-info">
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client 3">
+                  <div>
+                      <h3>Fatou Ndiaye</h3>
+                      <p>Guide touristique</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Contrôles -->
+          <button class="prev-btn" aria-label="Témoignage précédent">
+              <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="next-btn" aria-label="Témoignage suivant">
+              <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <!-- Indicateurs -->
+          <div class="indicators">
+              <span class="dot active" data-index="0"></span>
+              <span class="dot" data-index="1"></span>
+              <span class="dot" data-index="2"></span>
+          </div>
+      </div>
+  </section>
+
+
+  <!-- APPEL À ACTION -->
+  <section class="cta">
+    <h2>Prêt à savourer ?</h2>
+    <a href="reservation.html" class="btn">Réserver ou Commander</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> Resto Custo (By FMDev). Tous droits réservés.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Date dynamique
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menu burger toggle
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+  </script>
+
+</body>
+</html>

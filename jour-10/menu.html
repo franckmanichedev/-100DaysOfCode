@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu - Resto Custo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+  <!-- Header -->
+    <header class="bg-yellow-400 text-black py-5 shadow-md">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Resto Custo</h1>
+        <a href="index.html" class="text-sm underline">← Retour à l'accueil</a>
+      </div>
+    </header>
+    <header class="hero">
+        <h1>Nos Délices à découvrir</h1>
+    </header>
+
+    <section class="menu-section">
+        <h2>Notre Menu</h2>
+        <p>Découvrez toutes les saveurs de Resto Custo</p>
+    </section>
+
+  <section class="filter-btns">
+    <button class="active" data-filter="all">Tous</button>
+    <button data-filter="plat">Plats du jour</button>
+    <button data-filter="fast">Fast food</button>
+    <button data-filter="accompagnement">Accompagnements</button>
+    <button data-filter="boisson">Boissons</button>
+  </section>
+
+  <section class="menu-container" id="menu">
+    <!-- Exemple -->
+    <div class="menu-item" data-category="plat">
+      <img src="https://africa-cuisine.com/wp-content/uploads/2022/02/Poulet-Directeur-Ge%CC%81ne%CC%81ral.jpg" alt="Plat du jour">
+      <div class="menu-content">
+        <h3 class="menu-title">Poulet DG</h3>
+        <p class="menu-desc">Poulet braisé accompagné de plantains mûrs et légumes sautés</p>
+        <div class="menu-price">3 000 FCFA</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-category="fast">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE7uFcKrsmGRSpplpusFhXcPU3s3RrvCfgiUnPV6OCEVfWebBSp13GcTKtmnAlxV7tyB0&usqp=CAU" alt="Fast food">
+      <div class="menu-content">
+        <h3 class="menu-title">Double Cheeseburger</h3>
+        <p class="menu-desc">Pain toasté, steak haché, double fromage fondu, crudités fraîches</p>
+        <div class="menu-price">2 500 FCFA</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-category="accompagnement">
+      <img src="https://media.jemepropose.com/offers_pictures/member_935502/offer_4065307/offer_4065307_picture_1094696.png" alt="Frites">
+      <div class="menu-content">
+        <h3 class="menu-title">Frites maison</h3>
+        <p class="menu-desc">Pommes de terre fraîches, croustillantes et dorées à souhait</p>
+        <div class="menu-price">1 000 FCFA</div>
+      </div>
+    </div>
+
+    <div class="menu-item" data-category="boisson">
+      <img src="https://prod-backsite.ecomatin.be/wp-content/uploads/2025/01/Un-casier-de-Booster-Whisky-Cola.jpg" alt="Boisson">
+      <div class="menu-content">
+        <h3 class="menu-title">Jus de Bissap</h3>
+        <p class="menu-desc">Fait maison, frais et sucré juste comme il faut</p>
+        <div class="menu-price">500 FCFA</div>
+      </div>
+    </div>
+
+    <!-- Tu peux dupliquer ici pour plus d'éléments -->
+  </section>
+
+  <div class="cta">
+      <a href="https://wa.me/2376xxxxxxxx">Commander maintenant sur WhatsApp</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> Resto Custo (By FMDev). Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Date dynamique
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Menu burger toggle
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('nav-active');
+      burger.classList.toggle('toggle');
+    });
+
+    // Filtrage du menu
+    const buttons = document.querySelectorAll(".filter-btns button");
+    const items = document.querySelectorAll(".menu-item");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.getAttribute("data-filter");
+
+        items.forEach(item => {
+          const category = item.getAttribute("data-category");
+          if (filter === "all" || category === filter) {
+            item.style.display = "block";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+
+    ScrollReveal().reveal(".menu-item", {
+      delay: 100,
+      interval: 150,
+      distance: '20px',
+      origin: 'bottom',
+      duration: 600,
+      easing: 'ease-in-out'
+    });
+  </script>
+</body>
+</html>

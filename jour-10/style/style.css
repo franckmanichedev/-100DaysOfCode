@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #222;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #222;
+}
+.logo span {
+  color: #fbc531;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  font-weight: 500;
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: #333;
+}
+
+/* HERO */
+.hero {
+  background: url('../images/delice.jpg') center/cover no-repeat;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+}
+.hero h1 span {
+  color: #fbc531;
+}
+.hero p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+.btn {
+  background: #fbc531;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 10%;
+  text-align: center;
+}
+.about, .features, .menu, .cta {
+  background: #f9f9f9;
+}
+.menu-grid, .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.menu-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+.menu-item h3 {
+  margin: 10px 0;
+}
+.btn-outline {
+  display: inline-block;
+  border: 2px solid #fbc531;
+  color: #fbc531;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 25px;
+}
+.features-grid h4 {
+  color: #fbc531;
+  margin-bottom: 5px;
+}
+
+/* TEMOIGNAGES */
+/* Section Témoignages */
+.testimonials {
+    padding: 4rem 10%;
+    background: #fff9e6;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d4a017;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.testimonials h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #fbc531;
+    margin: 1rem auto;
+}
+
+.testimonial-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.testimonial {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.client-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fbc531;
+}
+
+.client-info h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.3rem;
+    text-align: left;
+}
+
+.client-info p {
+    color: #777;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* Contrôles */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fbc531;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: #e0b52a;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Indicateurs */
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: #fbc531;
+    transform: scale(1.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 3rem 5%;
+    }
+    
+    .client-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .client-info h3, 
+    .client-info p {
+        text-align: center;
+    }
+    
+    .prev-btn, .next-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* CTA */
+.cta {
+  background: #fbc531;
+  color: #000;
+}
+.cta .btn {
+  background: #000;
+  color: #fff;
+  margin-top: 15px;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 20px 10%;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 10%;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .nav-links.nav-active {
+    display: flex;
+  }
+  .burger {
+    display: flex;
+  }
+}
+
+/* MENU */
+:root {
+    --primary: #f7c20a;
+    --dark: #111;
+    --light: #fff;
+    --gray: #f3f3f3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--gray);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+header.hero {
+    background: url('../images/delice.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+header.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    background: rgba(0,0,0,0.4);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+}
+
+.menu-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: var(--dark);
+}
+
+.filter-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 1rem;
+}
+
+.filter-btns button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--primary);
+  color: var(--dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-btns button:hover,
+.filter-btns button.active {
+    background-color: #ffd700;
+    color: white;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.menu-item {
+  background: var(--light);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-content {
+  padding: 1rem;
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.menu-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.menu-price {
+  color: var(--primary);
+  font-weight: bold;
+  margin-top: 0.8rem;
+}
+
+.cta {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.cta a {
+  text-decoration: none;
+  background: var(--primary);
+  color: var(--dark);
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.cta a:hover {
+  background: #ffc107;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .menu-desc {
+    font-size: 0.9rem;
+  }
+}

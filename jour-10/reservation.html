@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Réservation | Resto Custo</title>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style/style.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdf7;
+    }
+
+    input, select, textarea {
+      transition: 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #facc15;
+      box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.3);
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-yellow-400 text-black py-5 shadow-md">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Resto Custo</h1>
+      <a href="index.html" class="text-sm underline">← Retour à l'accueil</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-[url('https://source.unsplash.com/1600x900/?restaurant,table')] bg-cover bg-center bg-fixed relative">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 text-white max-w-2xl mx-auto px-4" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-4">Réservez votre table dès maintenant</h2>
+      <p class="text-lg mb-6">Un moment de pur délice vous attend chez Resto Custo. Commandez ou réservez à l'avance !</p>
+      <a href="https://wa.me/237XXXXXXXX" target="_blank" class="bg-yellow-400 text-black px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition">
+        Réserver via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="py-16 px-6 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold text-center mb-8" data-aos="fade-up">Formulaire de Réservation</h3>
+    <form class="bg-white shadow-2xl p-8 rounded-lg space-y-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="block mb-2 font-semibold">Nom complet</label>
+          <input type="text" placeholder="Jean Dupont" required class="w-full p-3 border rounded-md"/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Téléphone</label>
+          <input type="tel" placeholder="+237 6 XX XX XX XX" required class="w-full p-3 border rounded-md"/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Date</label>
+          <input type="date" required class="w-full p-3 border rounded-md"/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Heure</label>
+          <input type="time" required class="w-full p-3 border rounded-md"/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Nombre de personnes</label>
+          <input type="number" min="1" max="20" value="2" class="w-full p-3 border rounded-md"/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Type de réservation</label>
+          <select class="w-full p-3 border rounded-md">
+            <option>Dîner sur place</option>
+            <option>Commande à emporter</option>
+            <option>Livraison</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="block mb-2 font-semibold">Message (optionnel)</label>
+        <textarea rows="3" placeholder="Une demande spéciale ?" class="w-full p-3 border rounded-md"></textarea>
+      </div>
+      <button type="submit" class="bg-yellow-400 text-black px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition">
+        Envoyer la Réservation
+      </button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; <span id="year"></span> Resto Custo (By FMDev). Tous droits réservés.</p>
+  </footer>
+
+  <!-- JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
