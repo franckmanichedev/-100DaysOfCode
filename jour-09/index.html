@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onglets Modernes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabs-container">
+        <div class="tabs-header">
+            <div class="tab-btn active" data-tab="tab1">
+                <i class="fas fa-chart-line"></i>
+                <span>Analytique</span>
+            </div>
+            <div class="tab-btn" data-tab="tab2">
+                <i class="fas fa-cog"></i>
+                <span>Paramètres</span>
+            </div>
+            <div class="tab-btn" data-tab="tab3">
+                <i class="fas fa-bell"></i>
+                <span>Notifications</span>
+            </div>
+            <div class="tab-btn" data-tab="tab4">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </div>
+            <div class="tab-indicator"></div>
+        </div>
+
+        <div class="tabs-content">
+            <div class="tab-panel active" id="tab1">
+                <h2>Données Analytiques</h2>
+                <p>Visualisez vos performances en temps réel avec nos outils avancés d'analyse de données.</p>
+                <div class="chart-placeholder"></div>
+            </div>
+
+            <div class="tab-panel" id="tab2">
+                <h2>Configuration</h2>
+                <p>Personnalisez votre expérience selon vos préférences.</p>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <i class="fas fa-palette"></i>
+                        <span>Thème</span>
+                    </div>
+                    <div class="setting-item">
+                        <i class="fas fa-language"></i>
+                        <span>Langue</span>
+                    </div>
+                    <div class="setting-item">
+                        <i class="fas fa-bell-slash"></i>
+                        <span>Notifications</span>
+                    </div>
+                    <div class="setting-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Sécurité</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="tab3">
+                <h2>Alertes Récentes</h2>
+                <div class="notifications-list">
+                    <div class="notification">
+                        <div class="notification-icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="notification-content">
+                            <p>Nouveau message reçu</p>
+                            <small>Il y a 2 minutes</small>
+                        </div>
+                    </div>
+                    <div class="notification">
+                        <div class="notification-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="notification-content">
+                            <p>Tâche complétée</p>
+                            <small>Il y a 1 heure</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="tab4">
+                <h2>Votre Profil</h2>
+                <div class="profile-card">
+                    <div class="avatar">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h3>Franck Maniche</h3>
+                        <p>franckmaniche6@gmail.com</p>
+                        <button class="edit-btn">Modifier le profil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
