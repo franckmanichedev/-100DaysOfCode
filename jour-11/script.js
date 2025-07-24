@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = (window.scrollY / totalHeight) * 100;
-        progressBar.style.width = `${progress}`;
+        progressBar.style.width = `${progress}%`;
     });
 
     // Scroll Spy
