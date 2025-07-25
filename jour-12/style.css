@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #1a1a2e);
+    padding: 20px;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 320px;
+    background-color: #000;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 25px 75px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.display {
+    padding: 30px 20px 20px;
+    text-align: right;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.previous-operation {
+    min-height: 24px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.current-operation {
+    min-height: 60px;
+    font-size: 3.5rem;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 20px;
+    background-color: #000;
+}
+
+button {
+    border: none;
+    outline: none;
+    /* border-radius: 50%; */
+    font-size: 1.8rem;
+    cursor: pointer;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+button:active {
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+.gray {
+    background-color: #a5a5a5;
+    color: #000;
+}
+
+.gray:hover {
+    background-color: #d4d4d2;
+}
+
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark:hover {
+    background-color: #4d4d4d;
+}
+
+.orange {
+    background-color: #ff9500;
+    color: white;
+    font-size: 2.2rem;
+}
+
+.orange:hover {
+    background-color: #ffaa33;
+}
+
+.orange.selected {
+    background-color: white;
+    color: #ff9500;
+}
+
+.zero {
+    grid-column: span 2;
+    /* border-radius: 35px; */
+    justify-content: flex-start;
+    padding-left: 30px;
+}
+
+.operator-icon {
+    font-size: 1.6rem;
+}
+
+.memory-indicator {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #ff9500;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.memory-indicator.active {
+    opacity: 1;
+}
+
+.status-bar {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 25px;
+    background-color: #000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+@media (max-width: 350px) {
+    button {
+        height: 65px;
+        font-size: 1.6rem;
+    }
+    
+    .current-operation {
+        font-size: 3rem;
+    }
+}
