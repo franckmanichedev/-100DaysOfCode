@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - FM Dev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ma To-Do List</h1>
+        
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche...">
+            <button id="addBtn">Ajouter</button>
+        </div>
+        
+        <ul id="taskList" class="task-list"></ul>
+        
+        <div class="actions">
+            <span id="taskCounter" class="task-count">0 tâche(s)</span>
+            <button id="clearBtn" class="clear-btn">Vider la liste</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

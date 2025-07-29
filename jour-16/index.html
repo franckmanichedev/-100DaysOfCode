@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modale Réutilisable - FM Dev</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Modale Réutilisable</h1>
+        
+        <button class="btn btn-primary" data-modal-open="modal1">
+            #Day16 Modale 1
+        </button>
+        
+        <button class="btn btn-primary" data-modal-open="modal2">
+            #Day16 Modale 2
+        </button>
+        
+        <button class="btn btn-primary" data-modal-open="modal3">
+            Modale avec Contenu Personnalisé
+        </button>
+    </div>
+
+    <!-- Template de la modale -->
+    <template id="modalTemplate">
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" data-modal-title>Titre de la Modale</h2>
+                    <button class="modal-close" data-modal-close>&times;</button>
+                </div>
+                <div class="modal-body" data-modal-body>
+                    Contenu par défaut de la modale.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-modal-close>Annuler</button>
+                    <button class="btn btn-primary" data-modal-confirm>Confirmer</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>

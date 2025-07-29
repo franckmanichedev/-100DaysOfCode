@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Citations Inspirantes - FM Dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>#Day14 Citations Inspirantes</h1>
+            <p class="subtitle">Découvrez des citations inspirantes de grands penseurs, écrivains et leaders à travers l'histoire</p>
+        </header>
+        
+        <div class="category-selector">
+            <button class="category-btn active" data-category="all">Toutes</button>
+            <button class="category-btn" data-category="wisdom">Sagesse</button>
+            <button class="category-btn" data-category="life">Vie</button>
+            <button class="category-btn" data-category="success">Succès</button>
+            <button class="category-btn" data-category="love">Amour</button>
+        </div>
+        
+        <div class="quote-box">
+            <p class="quote-text" id="quote-text">Au lieu de te d'interroger, teste et comtemple le resultat.</p>
+            <p class="quote-author" id="quote-author">Franck Maniche</p>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-new" id="new-quote">
+                <i class="fas fa-sync-alt"></i> Nouvelle citation
+            </button>
+            <button class="btn btn-copy" id="copy-quote">
+                <i class="fas fa-copy"></i> Copier
+            </button>
+            <button class="btn btn-tweet" id="tweet-quote">
+                <i class="fab fa-twitter"></i> Tweeter
+            </button>
+        </div>
+        
+        <div class="notification" id="notification">Citation copiée !</div>
+        
+        <footer>
+            <p>© Day14 Générateur de Citations Inspirantes | Plus de 100 citations disponibles</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
