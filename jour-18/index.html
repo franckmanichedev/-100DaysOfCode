@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Typer - Apprendre les balises HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Dev Typer</h1>
+        <p>Entrez les balises HTML qui s'affichent le plus vite possible !</p>
+        
+        <div class="stats">
+            <div class="stat">Temps: <span id="time">0</span>s</div>
+            <div class="stat">Score: <span id="score">0</span></div>
+            <div class="stat">Restantes: <span id="remaining">15</span></div>
+        </div>
+        
+        <div class="tag-display" id="tag-display"></div>
+        
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Tapez la balise ici..." autofocus>
+        </div>
+        
+        <button id="start-btn">Commencer</button>
+        
+        <div class="results" id="results">
+            <h2>Résultats</h2>
+            <p>Temps total: <span id="total-time">0</span> secondes</p>
+            <p>Score final: <span id="final-score">0</span></p>
+            <p>Précision: <span id="accuracy">0</span>%</p>
+            
+            <h3>Détail des balises:</h3>
+            <div id="tags-detail"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
