@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mot de Passe Sécurisé - FM Dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-lock"></i> #Day19 Générateur de Mot de Passe</h1>
+        
+        <div class="password-display">
+            <input type="text" id="passwordOutput" readonly>
+            <button class="copy-btn" id="copyBtn" title="Copier">
+                <i class="far fa-copy"></i>
+            </button>
+        </div>
+        
+        <div class="strength-meter">
+            <div class="strength-bar" id="strengthBar"></div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="lengthSlider">Longueur: <span id="lengthValue">12</span></label>
+                <div class="length-control">
+                    <input type="range" id="lengthSlider" min="4" max="32" value="12">
+                </div>
+            </div>
+            
+            <div class="options">
+                <div class="option-item">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Majuscules (A-Z)</label>
+                </div>
+                <div class="option-item">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Minuscules (a-z)</label>
+                </div>
+                <div class="option-item">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Chiffres (0-9)</label>
+                </div>
+                <div class="option-item">
+                    <input type="checkbox" id="symbols" checked>
+                    <label for="symbols">Symboles (!@#$%)</label>
+                </div>
+            </div>
+        </div>
+        
+        <button class="generate-btn" id="generateBtn">
+            Générer un mot de passe
+        </button>
+    </div>
+
+    <div class="copy-notification" id="copyNotification">
+        Mot de passe copié !
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
