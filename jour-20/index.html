@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Tarifs - FM Dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>FM Dev - Services</h2>
+            <p class="section-subtitle">Des solutions sur mesure pour répondre à vos besoins digitaux. Chaque projet est unique et mérite une approche personnalisée.</p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card" data-service="web-dev">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Développement Web</h3>
+                        <p class="service-description">Création de sites web performants, responsive et adaptés à vos besoins avec les dernières technologies.</p>
+                        <span class="service-more">En savoir plus →</span>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card" data-service="web-design">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Web Design</h3>
+                        <p class="service-description">Designs modernes et intuitifs qui captivent vos visiteurs et renforcent votre identité de marque.</p>
+                        <span class="service-more">En savoir plus →</span>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card" data-service="seo">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">SEO & Performance</h3>
+                        <p class="service-description">Optimisation pour les moteurs de recherche et amélioration des performances pour un meilleur classement.</p>
+                        <span class="service-more">En savoir plus →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Modals -->
+    <div class="modal" id="web-dev-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3 class="modal-title">Développement Web</h3>
+            <div class="modal-body">
+                <p>Je crée des sites web sur mesure en utilisant les dernières technologies du web pour garantir performance, sécurité et évolutivité. Chaque projet est développé en pensant à l'expérience utilisateur et aux besoins spécifiques de votre entreprise.</p>
+            </div>
+            <div class="modal-features">
+                <h4>Ce qui est inclus :</h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> Développement front-end avec HTML5, CSS3, JavaScript</li>
+                    <li><i class="fas fa-check"></i> Frameworks modernes (React, Vue.js, etc.)</li>
+                    <li><i class="fas fa-check"></i> Back-end avec Node.js, PHP ou autres technologies</li>
+                    <li><i class="fas fa-check"></i> Intégration de CMS (WordPress, etc.) si nécessaire</li>
+                    <li><i class="fas fa-check"></i> Site 100% responsive (adapté à tous les écrans)</li>
+                    <li><i class="fas fa-check"></i> Optimisation des performances</li>
+                    <li><i class="fas fa-check"></i> Formation pour la gestion du contenu</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="web-design-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3 class="modal-title">Web Design</h3>
+            <div class="modal-body">
+                <p>Un design réussi combine esthétique et fonctionnalité. Je crée des interfaces utilisateur intuitives et attractives qui reflètent l'identité de votre marque tout en offrant une expérience utilisateur optimale.</p>
+            </div>
+            <div class="modal-features">
+                <h4>Ce qui est inclus :</h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> Audit de l'existant et benchmark concurrentiel</li>
+                    <li><i class="fas fa-check"></i> Création de wireframes et maquettes</li>
+                    <li><i class="fas fa-check"></i> Design d'interface (UI) moderne et épuré</li>
+                    <li><i class="fas fa-check"></i> Expérience utilisateur (UX) optimisée</li>
+                    <li><i class="fas fa-check"></i> Charte graphique cohérente avec votre identité</li>
+                    <li><i class="fas fa-check"></i> Design responsive (mobile, tablette, desktop)</li>
+                    <li><i class="fas fa-check"></i> Livraison des assets et guidelines</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="seo-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h3 class="modal-title">SEO & Performance</h3>
+            <div class="modal-body">
+                <p>Votre site doit non seulement être visible, mais aussi performant. J'optimise votre présence en ligne pour améliorer votre classement dans les résultats de recherche et offrir une expérience rapide et fluide à vos visiteurs.</p>
+            </div>
+            <div class="modal-features">
+                <h4>Ce qui est inclus :</h4>
+                <ul>
+                    <li><i class="fas fa-check"></i> Audit SEO complet de votre site</li>
+                    <li><i class="fas fa-check"></i> Optimisation du contenu et des métadonnées</li>
+                    <li><i class="fas fa-check"></i> Amélioration des performances (temps de chargement)</li>
+                    <li><i class="fas fa-check"></i> Optimisation pour les mobiles</li>
+                    <li><i class="fas fa-check"></i> Stratégie de mots-clés</li>
+                    <li><i class="fas fa-check"></i> Analyse de la concurrence</li>
+                    <li><i class="fas fa-check"></i> Rapports mensuels d'évolution</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" style="background-color: #f1f5fe;">
+        <div class="container">
+            <h2>FM Dev - Tarifs</h2>
+            <p class="section-subtitle">Des forfaits adaptés à chaque type de projet. Paiement unique ou abonnement mensuel selon vos besoins.</p>
+            
+            <div class="pricing-toggle">
+                <div class="toggle-container">
+                    <div class="toggle-option active" data-period="monthly">Facturation mensuelle</div>
+                    <div class="toggle-option" data-period="yearly">Facturation annuelle (20% de réduction)</div>
+                </div>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Plan 1 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Starter</h3>
+                        <div class="pricing-price monthly-price">€790</div>
+                        <div class="pricing-price yearly-price" style="display: none;">€632/mois</div>
+                        <div class="pricing-period">par projet</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Site vitrine 5 pages</li>
+                            <li><i class="fas fa-check"></i> Design responsive</li>
+                            <li><i class="fas fa-check"></i> Formulaire de contact</li>
+                            <li><i class="fas fa-check"></i> Hébergement basique</li>
+                            <li><i class="fas fa-check"></i> Support 1 mois</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn btn-outline">Choisir ce plan</a>
+                    </div>
+                </div>
+                
+                <!-- Plan 2 -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Populaire</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Professional</h3>
+                        <div class="pricing-price monthly-price">€1,490</div>
+                        <div class="pricing-price yearly-price" style="display: none;">€1,192/mois</div>
+                        <div class="pricing-period">par projet</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Site jusqu'à 15 pages</li>
+                            <li><i class="fas fa-check"></i> Design personnalisé</li>
+                            <li><i class="fas fa-check"></i> CMS intégré</li>
+                            <li><i class="fas fa-check"></i> SEO de base</li>
+                            <li><i class="fas fa-check"></i> Hébergement performant</li>
+                            <li><i class="fas fa-check"></i> Support 3 mois</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn">Choisir ce plan</a>
+                    </div>
+                </div>
+                
+                <!-- Plan 3 -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Enterprise</h3>
+                        <div class="pricing-price monthly-price">€2,990</div>
+                        <div class="pricing-price yearly-price" style="display: none;">€2,392/mois</div>
+                        <div class="pricing-period">par projet</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Site complexe sur mesure</li>
+                            <li><i class="fas fa-check"></i> Design UX/UI avancé</li>
+                            <li><i class="fas fa-check"></i> Fonctionnalités spécifiques</li>
+                            <li><i class="fas fa-check"></i> SEO complet</li>
+                            <li><i class="fas fa-check"></i> Hébergement premium</li>
+                            <li><i class="fas fa-check"></i> Support 6 mois</li>
+                            <li><i class="fas fa-check"></i> Analyse de performance</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#contact" class="btn btn-outline">Choisir ce plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
