@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Pour la description de mon site -->
+    <meta name="description" content="Franck Maniche - Développeur Web Full Stack freelance. Création de sites web, applications mobiles et solutions sur mesure. Découvrez mes compétences et projets.">
+
+    <!--  -->
+    <link rel="canonical" href="https://mondomaine.com" />
+
+    <title>FM Dev - Freelance Développeur Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css">
+    
+    <!-- Animate.css pour les animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custon css file -->
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Franck Maniche",
+            "jobTitle": "Développeur Web Full Stack",
+            "url": "https://mondomaine.com",
+            "sameAs": [
+                "https://github.com/franckmanichedev",
+                "https://www.linkedin.com/in/franck-maniche-0354a2312/"
+            ]
+        }
+</script>
+</head>
+<body class="light-theme">
+    <div class="progress-container position-fixed w-100" style="top: 0; left: 0; height: 4px; z-index: 1000;">
+        <div id="progressBar" class="progress-bar bg-primary" style="height: 100%; width: 0%;"></div>
+    </div>
+    <div id="welcomeAnimation" class="position-fixed w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="background: var(--primary); z-index: 9999; transition: opacity 0.5s ease;">
+        <div class="spinner-border text-light mb-3" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <h2 class="text-white animate__animated animate__fadeIn">Bienvenue sur mon portfolio</h2>
+    </div>
+    <!-- Header -->
+    <header class="fixed-top" role="banner">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg" aria-label="Navigation principale">
+                <div class="container-fluid">
+                    <a class="navbar-brand logo" href="index.html">FM<span>Dev</span></a>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto nav-links">
+                            <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">A propos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Competences</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                            <li class="nav-item">
+                                <button class="theme-btn theme-btn-desktop mt-2 light" id="darkMode-icon">
+                                    <i class="fa fa-sun sun text-light"></i>
+                                    <i class="fa fa-moon moon text-light"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="theme-btn theme-btn-mobile light" id="darkMode-icon-mobile">
+                        <i class="fa fa-moon moon text-light"></i>
+                        <i class="fa fa-sun sun text-light"></i>
+                    </button>
+                    <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <!-- <i class="fas fa-bars"></i> -->
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="fw-bold fs-5">Salut, je suis</p>
+                    <h1 class="hero-title fw-bold">Franck Maniche</h1>
+                    <h2 class="hero-subtitle">"Teste et comptemple le résultat"</h2>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn">Prendre RDV</a>
+                        <a href="download/cv.pdf" class="btn btn-outline">Voir mon CV</a>
+                    </div>
+                </div>
+                <div class="profession-container">
+                    <div class="profession-box">
+                        <div class="profession" style="--i:0;">
+                            <i class='fa fa-code'></i>
+                            <h3>Développeur Web</h3>
+                        </div>
+                        <div class="profession" style="--i:1;">
+                            <i class='fa fa-mobile'></i>
+                            <h3>Développeur mobile</h3>
+                        </div>
+                        <div class="profession" style="--i:2;">
+                            <i class='fa fa-laptop'></i>
+                            <h3>Web Designer</h3>
+                        </div>
+                        <div class="profession" style="--i:3;">
+                            <i class='fa fa-desktop'></i>
+                            <h3>UI/UX Designer</h3>
+                        </div>
+        
+                        <div class="circle"></div>
+                    </div>
+        
+                    <div class="overlay"></div>
+                </div>
+
+                <!-- <div class="home-img">
+                    <img loading="lazy" src="https://raw.githubusercontent.com/franckmanichedev/personal-portfolio/refs/heads/main/assets/images/about/profile_images.png" alt="">
+                </div> -->
+                <div class="home-img">
+                    <!-- <img 
+                        loading="lazy" 
+                        src="https://raw.githubusercontent.com/franckmanichedev/personal-portfolio/refs/heads/main/assets/images/about/profile_images.png" 
+                        alt="Photo de profil de Franck Maniche"
+                    > -->
+                    <img 
+                        loading="lazy" 
+                        src="images/profile_images.webp"
+                        alt="Photo de Franck Maniche, Développeur Web Full Stack"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>A Propos de moi</h2>
+                <p class="section-subtitle lead text-muted">
+                    Des solutions complètes pour votre présence en ligne, de la conception au déploiement.
+                </p>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="card shadow-sm border-0 mb-5">
+                        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center py-3">
+                            <h3 class="fw-bold text-light mb-0">
+                                <i class="fas fa-book me-2"></i>Qui suis-je réellement ?
+                            </h3>
+                        </div>
+                        
+                        <div class="card-body card-bg-primary pb-0 px-3 py-4">
+                            <div class="ps-5">
+                                <p class="w-100 text-muted">
+                                    Bienvenue sur mon site web ! Je suis Franck Maniche, étudiant en génie logiciel passionné par la création de solutions innovantes et efficaces. Je suis ravi de partager avec toi mon parcours, mes compétences et mes projets. Explore mon site pour en savoir plus sur moi et mes réalisations !
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-start gap-3 mb-3">
+                                <div class="card p-2 bg-primary border-0 rounded-circle">
+                                    <i class="fa fa-laptop text-light"></i>
+                                </div>
+                                <p class="w-100 text-muted">
+                                    Je suis un jeune développeur passionné par la technologie et l'innovation. Depuis toujours, je suis fasciné par la façon dont les logiciels et les applications peuvent améliorer la vie quotidienne.
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-start gap-3 mb-3">
+                                <div class="card p-2 bg-success border-0 rounded-circle">
+                                    <i class="fa fa-mortar-board text-light"></i>
+                                </div>
+                                <p class="w-100 text-muted">
+                                    Je suis actuellement étudiant en génie logiciel et je suis déterminé à acquérir les compétences nécessaires pour devenir un développeur de haut niveau.
+                                </p>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-start gap-3">
+                                <div class="card p-2 bg-warning border-0 rounded-circle">
+                                    <i class="fa fa-key text-light"></i>
+                                </div>
+                                <p class="w-100 text-muted">
+                                    En dehors de mes études, j'aime explorer de nouvelles technologies et travailler sur des projets personnels. Je suis convaincu que la créativité et la persévérance sont les clés du succès dans le domaine du développement logiciel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card-bg-primary shadow-sm border-0 quote-box text-center pb-0 px-3 py-4">
+                        <p class="quote-text fw-bold text-primary" id="quote-text"></p>
+                        <p class="quote-author text-danger" id="quote-author"></p>
+                    </div>
+                    <div class="controls d-flex justify-content-center align-items-center my-3 gap-2">
+                        <button class="btn btn-outline-primary" id="new-quote">
+                            <i class="fa fa-sync-alt me-2"></i> Nouvelle citation
+                        </button>
+                        <button class="btn btn-outline-success" id="copy-quote">
+                            <i class="fa fa-copy me-2"></i> Copier
+                        </button>
+                    </div>
+                    <div class="notification text-success" id="notification">Citation copiée !</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-header p-0">
+                            <div class="img w-100" style="border-radius: 10px 10px 0 0;"></div>
+                            <!-- <img src="images/profile_images.jpg" alt="Franck Maniche" class="w-100" style="border-radius: 10px 10px 0 0;"> -->
+                        </div>
+                        
+                        <div class="card-body card-bg-primary py-2 px-3">
+                            <div class="d-flex justify-content-between align-items p-2">
+                                <p class="fw-bold fs-5 text-primary">Ce que je fait</p>
+                                <a href="download/cv.pdf" class="text-secondary">Voir CV</a>
+                            </div>
+                            <hr class="m-0">
+                            <div class="row p-2 services">
+                                <div class="card card-bg-secondary border-0 pb-0 py-3 px-2 mb-3 service-items">
+                                    <div class="d-flex justify-content-center align-items-start gap-3">
+                                        <div class="card border-0 bg-primary px-3 py-2">
+                                            <i class="fa fa-code text-light d-flex justify-content-center"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h4 class="fs-5 text-primary">Développement Web</h4>
+                                            <p class="w-100 text-muted">
+                                                Création de sites web sur mesure avec les dernières technologies pour des performances optimales.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-bg-secondary border-0 pb-0 py-3 px-2 mb-3 service-items">
+                                    <div class="d-flex justify-content-center align-items-start gap-3">
+                                        <div class="card border-0 bg-success px-3 py-2">
+                                            <i class="fa fa-shopping-cart text-light d-flex justify-content-center"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h4 class="fs-5 text-primary">E-commerce</h4>
+                                            <p class="w-100 text-muted">
+                                                Solutions de boutique en ligne sécurisées et faciles à gérer pour votre business.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-bg-secondary border-0 pb-0 py-3 px-2 mb-3 service-items">
+                                    <div class="d-flex justify-content-center align-items-start gap-3">
+                                        <div class="card border-0 bg-warning px-3 py-2">
+                                            <i class="fa fa-mobile text-light d-flex justify-content-center"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <h4 class="fs-5 text-primary">Sites Responsives</h4>
+                                            <p class="w-100 text-muted">
+                                                Des designs qui s'adaptent parfaitement à tous les appareils
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="section-header text-danger">
+                <h2>Compétences Techniques</h2>
+                <p class="section-subtitle lead text-muted">
+                    Mes compétences et technologies clés que j'ai acquises et que j'utilise pour créer des solutions performantes et innovantes.
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Front-End -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-category card card-bg-secondary h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="skill-category-header d-flex align-items-center mb-4">
+                                <div class="skill-category-icon me-3">
+                                    <!-- <i class="fa fa-laptop-code"></i> -->
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="skill-category-title">
+                                    <h3 class="h4 mb-0">Front-End</h3>
+                                </div>
+                            </div>
+                            <div class="skill-category-progress mb-4">
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="text-end text-primary fw-bold mt-1">90%</div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 95) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">95%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-html5" style="color: #e34f26;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">HTML5</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 90) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">90%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">CSS3</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 85) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">85%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-js" style="color: #f7df1e;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">JavaScript</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 80) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">80%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-bootstrap" style="color: #264de4;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">Bootstrap</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 65) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">65%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fa-brands fa-css3-alt" style="color: #61dafb;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">Tailwind CSS</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 50) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">50%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-react" style="color: #61dafb;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">React</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Back-End -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-category card card-bg-secondary h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="skill-category-header d-flex align-items-center mb-4">
+                                <div class="skill-category-icon me-3">
+                                    <!-- <i class="fa fa-laptop-code"></i> -->
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="skill-category-title">
+                                    <h3 class="h4 mb-0">Back-End</h3>
+                                </div>
+                            </div>
+                            <div class="skill-category-progress mb-4">
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="text-end text-primary fw-bold mt-1">80%</div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 80) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">80%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-php" style="color: #3776ab;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">PHP</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 75) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">75%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fa-solid fa-database" style="color: #00618a;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">MySQL</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 65) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">65%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-node-js" style="color: #68a063;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">Node.js</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 65) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">65%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fa-solid fa-network-wired" style="color: #68a063;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">API REST</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 50) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">50%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-laravel" style="color: #f01a1a;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">Laravel</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Outils -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="skill-category card card-bg-secondary h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="skill-category-header d-flex align-items-center mb-4">
+                                <div class="skill-category-icon me-3">
+                                    <!-- <i class="fa fa-laptop-code"></i> -->
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <div class="skill-category-title">
+                                    <h3 class="h4 mb-0">Outils & DevOps</h3>
+                                </div>
+                            </div>
+                            <div class="skill-category-progress mb-4">
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="text-end text-primary fw-bold mt-1">80%</div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 90) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">90%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-git-alt" style="color: #f05032;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">Git</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 85) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">85%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-figma" style="color: #a259ff;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">Figma</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 80) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">80%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fab fa-github" style="color: #303030;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">GitHub</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 75) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">75%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fa fa-code" style="color: #3776ab;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">VS Code</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 65) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">65%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fa-solid fa-paper-plane" style="color: #e34f26;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">Postman</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="skill-item text-center">
+                                        <div class="skill-circle mb-2">
+                                            <svg viewBox="0 0 100 100" width="80" height="80">
+                                                <circle class="skill-circle-bg" cx="50" cy="50" r="40"></circle>
+                                                <circle class="skill-circle-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: calc(226 - (226 * 65) / 100);"></circle>
+                                            </svg>
+                                            <div class="skill-circle-text">65%</div>
+                                        </div>
+                                        <div class="skill-icon mb-1">
+                                            <i class="fa-solid fa-cloud-arrow-up" style="color: #303030;"></i>
+                                        </div>
+                                        <div class="skill-name text-muted">Vercel</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mes Récents Projets</h2>
+                <p class="section-subtitle lead text-muted">
+                    Quelques réalisations qui démontrent mon expertise et ma polyvalence.
+                </p>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial-container mb-5">
+                    <!-- Conteneur du carousel -->
+                    <div class="testimonial-carousel">
+                        <!-- Projet 1 -->
+                        <div class="testimonial-card active bg-light h-100 border-0 overflow-hidden shadow-sm">
+                            <div class="row gap-0 flex-md-row flex-column">
+                                <div class="project-image col-md-7 position-relative">
+                                    <div class="image-container position-relative">
+                                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" 
+                                            alt="Projet 1" class="img-fluid w-100" height="200px">
+                                        <div class="image-overlay"></div>
+                                    </div>
+                                    <div class="testimonial-link position-absolute bottom-0 end-0 p-3">
+                                        <a href="#" class="me-2 text-white">
+                                            <i class="fab fa-github me-2 fs-3"></i>
+                                        </a>
+                                        <a href="#" class="me-2 text-white">
+                                            <i class="fas fa-external-link-alt me-1 fs-3"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="testimonial-details col-md-5 px-4 py-5 d-flex flex-column justify-content-center">
+                                    <span class="project-tag text-light bg-primary d-flex justify-content-center align-items-center col-md-3 col-4"><i class="fas fa-circle me-1" style="font-size: 8px;"></i> Front-end</span>
+                                    <h3 class="fs-2 fw-bold text-primary my-3">Portfolio Personnel</h3>
+                                    <p class="text-muted">Présentation de mes services et compétences acquises pendant mes différents parcours.</p>
+                                    <div class="tags-container d-flex flex-wrap gap-2">
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-3 col-3">Figma</span>
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-4 col-4">Bootstrap</span>
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-3 col-3">JS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 2 -->
+                        <div class="testimonial-card bg-light h-100 border-0 overflow-hidden shadow-sm">
+                            <div class="row gap-0">
+                                <div class="project-image col-md-7 position-relative">
+                                    <div class="image-container position-relative">
+                                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                                            alt="Projet 2" class="img-fluid w-100" height="200px">
+                                        <div class="image-overlay"></div>
+                                    </div>
+                                    <div class="testimonial-link position-absolute bottom-0 end-0 p-3">
+                                        <a href="#" class="me-2 text-white">
+                                            <i class="fab fa-github me-2 fs-3"></i>
+                                        </a>
+                                        <a href="#" class="me-2 text-white">
+                                            <i class="fas fa-external-link-alt me-1 fs-3"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="testimonial-details col-md-5 px-4 py-5 d-flex flex-column justify-content-center">
+                                    <span class="project-tag text-light bg-primary d-flex justify-content-center align-items-center col-md-3 col-4"><i class="fas fa-circle me-1" style="font-size: 8px;"></i> Full-Stack</span>
+                                    <h3 class="fs-2 fw-bold text-primary my-3">Application E-commerce</h3>
+                                    <p class="text-muted">Plateforme de vente en ligne avec système de paiement et gestion de stock.</p>
+                                    <div class="tags-container d-flex flex-wrap gap-2">
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-3 col-3">Bootstrap</span>
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-4 col-4">PHP</span>
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-3 col-3">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 3 -->
+                        <div class="testimonial-card bg-light h-100 border-0 overflow-hidden shadow-sm">
+                            <div class="row gap-0">
+                                <div class="project-image col-md-7 position-relative">
+                                    <div class="image-container position-relative">
+                                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" 
+                                            alt="Projet 3" class="img-fluid w-100" height="200px">
+                                        <div class="image-overlay"></div>
+                                    </div>
+                                    <div class="testimonial-link position-absolute bottom-0 end-0 p-3">
+                                        <!-- <a href="#" class="me-2 text-white">
+                                            <i class="fab fa-github me-2 fs-3"></i>
+                                        </a> -->
+                                        <a href="https://zone-travel.net/" target="_blank" class="me-2 text-white">
+                                            <i class="fas fa-external-link-alt me-1 fs-3"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="testimonial-details col-md-5 px-4 py-5 d-flex flex-column justify-content-center">
+                                    <span class="project-tag text-light bg-primary d-flex justify-content-center align-items-center col-md-3 col-4"><i class="fas fa-circle me-1" style="font-size: 8px;"></i> Mobile</span>
+                                    <h3 class="fs-2 fw-bold text-primary my-3">Application de suivi de sa procédure de voyage</h3>
+                                    <p class="text-muted">Gérer les procédures clients et leurs permettre de pourvoir le consulter depuis le site web officel de l'entreprise</p>
+                                    <div class="tags-container d-flex flex-wrap gap-2">
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-3 col-3">php</span>
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-3 col-3">mysql</span>
+                                        <span class="project-tag text-center text-muted fw-bold bg-secondary col-md-3 col-3">js</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contrôles du carousel -->
+                    <div class="indicators-controls d-flex justify-content-center align-items-center mt-4">
+                        <button class="prev-btn btn btn-outline-primary mx-2" aria-label="Précédent">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="dots-container mx-3">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                        
+                        <button class="next-btn btn btn-outline-primary mx-2" aria-label="Suivant">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filtres -->
+            <div class="container mb-4 mb-md-5">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                            <button class="btn btn-outline-primary active" data-filter="all" type="button">
+                                Tout
+                            </button>
+                            <button class="btn btn-outline-primary" data-filter="front-end" type="button">
+                                Front-end
+                            </button>
+                            <button class="btn btn-outline-primary" data-filter="back-end" type="button">
+                                Back-end
+                            </button>
+                            <button class="btn btn-outline-primary" data-filter="full-stack" type="button">
+                                Full-stack
+                            </button>
+                            <button class="btn btn-outline-primary" data-filter="design" type="button">
+                                Design
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projets -->
+            <div class="container">
+                <div class="row g-4 portfolio-container">
+                    <!-- Projet 1 - Front-end -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="front-end">
+                        <div class="project-card card h-100 border-0 overflow-hidden shadow-sm">
+                            <div class="project-image position-relative">
+                                <div class="image-container position-relative">
+                                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Site restaurant" class="img-fluid">
+                                    <div class="image-overlay"></div>
+                                </div>
+                                <span class="badge bg-primary position-absolute top-0 start-0 m-3">
+                                    <i class="fas fa-circle me-1" style="font-size: 8px;"></i> Front-end
+                                </span>
+                                <div class="project-link position-absolute bottom-0 end-0 p-3">
+                                    <a href="#" class="btn btn-sm btn-light me-2" data-bs-toggle="tooltip" title="Code source">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-light" data-bs-toggle="tooltip" title="Voir le projet">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-primary">Site vitrine restaurant</h3>
+                                <p class="card-text text-muted">
+                                    Site moderne pour un restaurant gastronomique avec réservation en ligne et galerie photo.
+                                </p>
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-uppercase small fw-bold text-muted">
+                                        <i class="fas fa-code text-warning me-1"></i>Technologies
+                                    </span>
+                                    <div class="tech-tags">
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary">HTML/CSS</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary">JavaScript</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary">Bootstrap</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - Back-end -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="back-end">
+                        <div class="project-card card h-100 border-0 overflow-hidden shadow-sm">
+                            <div class="project-image position-relative">
+                                <div class="image-container position-relative">
+                                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Site restaurant" class="img-fluid">
+                                    <div class="image-overlay"></div>
+                                </div>
+                                <span class="badge bg-primary position-absolute top-0 start-0 m-3">
+                                    <i class="fas fa-circle me-1" style="font-size: 8px;"></i> Front-end
+                                </span>
+                                <div class="project-link position-absolute bottom-0 end-0 p-3">
+                                    <a href="#" class="btn btn-sm btn-light me-2" data-bs-toggle="tooltip" title="Code source">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-sm btn-light" data-bs-toggle="tooltip" title="Voir le projet">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="h5 card-title text-primary">Site vitrine restaurant</h3>
+                                <p class="card-text text-muted">
+                                    Site moderne pour un restaurant gastronomique avec réservation en ligne et galerie photo.
+                                </p>
+                                <hr>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-uppercase small fw-bold text-muted">
+                                        <i class="fas fa-code text-warning me-1"></i>Technologies
+                                    </span>
+                                    <div class="tech-tags">
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary">HTML/CSS</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary">JavaScript</span>
+                                        <span class="badge bg-secondary bg-opacity-10 text-secondary">Bootstrap</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Expérience & Éducation</h2>
+                <p class="section-subtitle lead text-muted">
+                    Mon parcours professionnel et académique qui a façonné mes compétences.
+                </p>
+            </div>
+            
+            <div class="timeline">
+                <!-- Expérience 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-card card-bg-secondary">
+                        <div class="timeline-date">2021 - Présent</div>
+                        <h3 class="timeline-title">Développeur Full-Stack Freelance</h3>
+                        <div class="timeline-subtitle text-muted">
+                            <!-- <i class="fa fa-building"></i> FM Dev Studio, Paris -->
+                            <i class="fas fa-building text-warning"></i> FM Dev Studio, Paris
+                        </div>
+                        <p class="timeline-description text-muted">
+                            Développement d'applications web sur mesure pour divers clients, 
+                            de la conception à la mise en production. Gestion de projet et 
+                            relation client.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">React</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">Node.js</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">MongoDB</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Éducation 1 -->
+                <div class="timeline-item right">
+                    <div class="timeline-card card-bg-secondary">
+                        <div class="timeline-date">2020 - 2021</div>
+                        <h3 class="timeline-title">Master en Informatique</h3>
+                        <div class="timeline-subtitle text-muted">
+                            <!-- <i class="fa fa-graduation-cap"></i> Université Paris-Saclay -->
+                            <i class="fas fa-graduation-cap text-warning"></i> Université Paris-Saclay
+                        </div>
+                        <p class="timeline-description text-muted">
+                            Spécialisation en architectures logicielles modernes et 
+                            développement d'applications distribuées.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">Microservices</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">Docker</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expérience 2 -->
+                <div class="timeline-item left">
+                    <div class="timeline-card card-bg-secondary">
+                        <div class="timeline-date">2019 - 2021</div>
+                        <h3 class="timeline-title">Développeur Front-End</h3>
+                        <div class="timeline-subtitle text-muted">
+                            <!-- <i class="fa fa-building"></i> TechSolutions, Lyon -->
+                            <i class="fas fa-building text-warning"></i> TechSolutions, Lyon
+                        </div>
+                        <p class="timeline-description text-muted">
+                            Développement d'interfaces utilisateur complexes avec React et 
+                            intégration avec des API REST. Participation à l'architecture 
+                            front-end.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">React</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">Redux</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">TypeScript</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Éducation 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-card card-bg-secondary">
+                        <div class="timeline-date">2017 - 2020</div>
+                        <h3 class="timeline-title">Licence en Informatique</h3>
+                        <div class="timeline-subtitle text-muted">
+                            <!-- <i class="fa fa-graduation-cap"></i> Université Paris-Diderot -->
+                            <i class="fas fa-graduation-cap text-warning"></i> Université Paris-Diderot
+                        </div>
+                        <p class="timeline-description text-muted">
+                            Fondamentaux de l'informatique avec spécialisation en 
+                            développement web et bases de données.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">Java</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">SQL</span>
+                            <span class="tech-tag bg-secondary bg-opacity-10 text-secondary">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contactez-moi</h2>
+                <p class="section-subtitle lead text-muted">
+                    Vous avez un projet en tête ? Discutons-en pour le concrétiser ensemble.
+                </p>
+            </div>
+            
+            <div class="container py-5">
+                <div class="row g-4">
+                    <!-- Colonne d'informations -->
+                    <div class="col-lg-5">
+                        <div class="card card-bg-secondary border-0 shadow-sm h-100">
+                            <div class="card-body p-4 p-md-5">
+                                <h2 class="mb-3 text-primary fw-bold">Contactez-moi</h2>
+                                <p class="text-muted mb-4">Disponible pour des opportunités freelance ou permanentes</p>
+                                
+                                <div class="d-flex flex-column gap-3">
+                                    <!-- Carte Localisation -->
+                                    <div class="d-flex align-items-start p-3 bg-light rounded-3 hover-lift">
+                                        <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-circle me-3">
+                                            <i class="fas fa-map-marker-alt fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="fs-6 fw-bold mb-1">Localisation</h3>
+                                            <p class="mb-0 text-muted">Douala, Cameroun</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Carte Email -->
+                                    <div class="d-flex align-items-start p-3 bg-light rounded-3 hover-lift">
+                                        <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-circle me-3">
+                                            <i class="fas fa-envelope fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="fs-6 fw-bold mb-1">Email</h3>
+                                            <a href="mailto:franckmaniche6@gmail.com" class="text-decoration-none text-muted">franckmaniche6@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Carte Téléphone -->
+                                    <div class="d-flex align-items-start p-3 bg-light rounded-3 hover-lift">
+                                        <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-circle me-3">
+                                            <i class="fas fa-phone-alt fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="fs-6 fw-bold mb-1">Téléphone</h3>
+                                            <a href="tel:+237653954179" class="text-decoration-none text-muted">+237 653 954 179</a>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Carte Horaires -->
+                                    <div class="d-flex align-items-start p-3 bg-light rounded-3 hover-lift">
+                                        <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-circle me-3">
+                                            <i class="fas fa-clock fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="fs-6 fw-bold mb-1">Horaires</h3>
+                                            <p class="mb-0 text-muted">Lun-Ven: 9h-18h</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Colonne Formulaire -->
+                    <div class="col-lg-7">
+                        <div class="card card-bg-secondary border-0 shadow-sm h-100">
+                            <div class="card-body p-4 p-md-5">
+                                <h2 class="mb-4 text-primary fw-bold">Envoyez un message</h2>
+                                
+                                <form>
+                                    <div class="row g-3">
+                                        <!-- Champ Nom -->
+                                        <div class="col-md-6">
+                                            <label for="name" class="text-muted form-label fw-semibold">Nom complet</label>
+                                            <input type="text" class="form-control border-none py-2" id="name" required>
+                                        </div>
+                                        
+                                        <!-- Champ Email -->
+                                        <div class="col-md-6">
+                                            <label for="email" class="text-muted form-label fw-semibold">Email</label>
+                                            <input type="email" class="form-control border-none py-2" id="email" required>
+                                        </div>
+                                        
+                                        <!-- Champ Sujet -->
+                                        <div class="col-12">
+                                            <label for="subject" class="text-muted form-label fw-semibold">Sujet</label>
+                                            <input type="text" class="form-control border-none py-2" id="subject" required>
+                                        </div>
+                                        
+                                        <!-- Champ Message -->
+                                        <div class="col-12">
+                                            <label for="message" class="text-muted form-label fw-semibold">Message</label>
+                                            <textarea class="form-control border-none py-2" id="message" rows="5" required></textarea>
+                                        </div>
+                                        
+                                        <!-- Bouton Submit -->
+                                        <div class="col-12 mt-3">
+                                            <button type="submit" class="btn btn-primary px-4 py-2 fw-semibold">
+                                                <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4" role="contentinfo">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Colonne Logo & Description -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="d-flex flex-column h-100">
+                        <a href="index.html" class="d-flex align-items-center mb-3 text-decoration-none">
+                            <span class="fs-3 fw-bold text-white">FM</span>
+                            <span class="fs-3 fw-bold text-primary">Dev</span>
+                        </a>
+                        <p class="text-white mb-4">
+                            Développeur web fullstack passionné par la création de solutions numériques performantes et innovantes.
+                        </p>
+                        <div class="mt-auto">
+                            <h3 class="h6 text-uppercase text-white mb-3">Abonnez-vous à ma newsletter</h3>
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Votre email">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne Liens rapides -->
+                <div class="col-md-4 col-lg-2 mb-4 mb-md-0">
+                    <h3 class="h5 text-uppercase text-primary mb-4 mobile-accordion">
+                        <span>Liens rapides</span> 
+                        <i class="fas fa-chevron-down accordion-icon ms-2 d-md-none"></i>
+                    </h3>
+                    <ul class="list-unstyled mobile-accordion-content">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">A propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Competences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne Services -->
+                <div class="col-md-4 col-lg-2 mb-4 mb-md-0">
+                    <h3 class="h5 text-uppercase text-primary mb-4 mobile-accordion">
+                        <span>Services</span> 
+                        <i class="fas fa-chevron-down accordion-icon ms-2 d-md-none"></i>
+                    </h3>
+                    <ul class="list-unstyled mobile-accordion-content">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none hover-primary">Développement Web</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none hover-primary">Applications Mobile</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none hover-primary">UI/UX Design</a></li>
+                        <li><a href="#" class="text-white text-decoration-none hover-primary">Consultation</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne Contact -->
+                <div class="col-md-4 col-lg-4">
+                    <h3 class="h5 text-uppercase text-primary mb-4 mobile-accordion">
+                        <span>Me contacter</span> 
+                        <i class="fas fa-chevron-down accordion-icon ms-2 d-md-none"></i>
+                    </h3>
+                    <ul class="list-unstyled text-white mobile-accordion-content">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-map-marker-alt text-primary me-2 mt-1"></i>
+                            <span>Douala, Cameroun</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="fas fa-envelope text-primary me-2 mt-1"></i>
+                            <a href="mailto:franckmaniche6@gmail.com" class="text-white text-decoration-none hover-white">franckmaniche6@gmail.com</a>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <i class="fas fa-phone-alt text-primary me-2 mt-1"></i>
+                            <a href="tel:+237653954179" class="text-white text-decoration-none hover-white">+237 653 954 179</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="social-links mt-4 d-flex gap-3">
+                        <a href="https://github.com/franckmanichedev/" target="_blank" class="social-link d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 text-primary hover-lift" style="width: 40px; height: 40px;">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/franck-maniche-0354a2312/" target="_blank" class="social-link d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 text-primary hover-lift" style="width: 40px; height: 40px;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100093038454439" target="_blank" class="social-link d-flex align-items-center justify-content-center rounded-circle bg-primary bg-opacity-10 text-primary hover-lift" style="width: 40px; height: 40px;">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white small">
+                        &copy; 2023 FM Dev. Tous droits réservés.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white small">
+                        Développé avec <i class="fas fa-heart text-danger"></i> par Franck Maniche
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="highContrastToggle" class="btn btn-primary position-fixed">
+        <i class="fas fa-adjust"></i>
+    </button>
+    <button id="scrollToTopBtn" class="btn btn-primary rounded-circle position-fixed">
+        <span id="scrollPercentage">0%</span>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
