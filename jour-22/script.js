@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('', function() {
     // Citations 
     const quotes = [
         {
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
             category: "success"
         },
         {
-            text: "Au lieu de te d'interroger, teste et comtemple le resultat.",
+            text: "Au lieu de te d'interroger, teste et contemple le resultat.",
             author: "Franck Maniche",
             category: "success"
         },
@@ -385,7 +385,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Welcome Animation
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('', () => {
     const welcomeAnimation = document.getElementById('welcomeAnimation');
     
     // Affiche l'animation pendant 2 secondes
@@ -449,7 +449,7 @@ window.addEventListener('load', () => {
 });
 
 // Latest-Project
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('', function() {
     const carousel = document.querySelector('.testimonial-carousel');
     const cards = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.dot');
@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function() {
     carousel.addEventListener('mouseleave', startAutoSlide);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('', function() {
     // Initialisation des tooltips Bootstrap
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map(function (tooltipTriggerEl) {
