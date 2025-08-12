@@ -62,6 +62,7 @@
     --bg-tertiary: var(--gray-200);
     
     /* Texte */
+    --nav-link-a: var(--gray-900);
     --text-primary: var(--gray-900);
     --text-secondary: var(--gray-700);
     --text-tertiary: var(--gray-600);
@@ -84,6 +85,7 @@
     --bg-tertiary: #1a243a;
     
     /* Texte - Blanc cassé avec nuances */
+    --nav-link-a: var(--gray-100);
     --text-primary: #e0e4eb;
     --text-secondary: #b8c1d1;
     --text-tertiary: #8a94a8;
@@ -235,6 +237,69 @@ h3 {
 }
 
 /* Navigation */
+
+/* ===== HEADER DYNAMIQUE ===== */
+header.scrolled {
+    background-color: color-mix(in srgb, var(--bg-primary), transparent 20%) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== MENU BURGER SUR MOBILE ===== */
+@media (max-width: 992px) {
+    /* Fond du header quand le menu est ouvert */
+    header.menu-open {
+        background-color: var(--bg-primary) !important;
+        backdrop-filter: blur(0);
+    }
+
+    /* Style du menu déroulant */
+    .navbar-collapse {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        padding: 0 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        /* max-height: calc(100vh - 80px); */
+        height: 100vh;
+        overflow-y: auto;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+
+    .navbar-collapse.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+    }
+
+    /* Liens du menu mobile */
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-links li {
+        margin-left: 0 !important;
+    }
+
+    /* Bouton burger visible */
+    .mobile-menu-btn {
+        display: block;
+        z-index: 1001;
+    }
+}
+
+/* ===== CONTRASTES POUR LE THÈME SOMBRE ===== */
+.dark-mode header {
+    --bg-primary: rgba(15, 15, 15, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*  */
 header {
     position: fixed;
     top: 0;
@@ -268,7 +333,13 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
+    transition: left 0.3s ease;
 }
+    
+.nav-links.active {
+    left: 0;
+}
+
 
 .nav-links li{
     margin-left: 2rem;
@@ -280,7 +351,7 @@ nav {
 }
 
 .nav-links a {
-    color: var(--dark);
+    color: var(--nav-link-a);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -1552,6 +1623,55 @@ textarea.form-control {
     color: var(--text-primary);
 }
 
+.tiktok-typing {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+.tiktok-typing.active{
+    display: flex;
+}
+
+.tiktok-typing .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #aaa;
+    animation: tiktokTyping 1.4s infinite ease-in-out;
+}
+
+.tiktok-typing .dot:nth-child(1) { animation-delay: 0s; }
+.tiktok-typing .dot:nth-child(2) { animation-delay: 0.2s; }
+.tiktok-typing .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes tiktokTyping {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-8px); }
+}
+
+/* .tiktok-typing {
+    gap: 6px;
+    height: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) { animation-delay: -0.32s; }
+.dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+} */
+
 /* Responsive */
 @media (max-width: 992px) {
     .contact-container {
@@ -1679,15 +1799,9 @@ textarea.form-control {
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
-        background-color: var(--white);
         flex-direction: column;
         align-items: center;
         padding: 2rem 0;
-        transition: left 0.3s ease;
-    }
-    
-    .nav-links.active {
-        left: 0;
     }
     
     .nav-links li {
@@ -1751,3 +1865,119 @@ textarea.form-control {
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 }
+
+/* Animation */
+/* Animations de base */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from { 
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Classes d'animation réutilisables */
+.card-hover-effect {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn-hover-effect {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hover-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.btn-hover-effect:hover::after {
+  transform: translateX(0);
+}
+
+.animate-on-scroll{
+  animation: animated 1s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.8s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease infinite;
+}
+
+.animate-delay-1 { animation-delay: 0.2s; }
+.animate-delay-2 { animation-delay: 0.4s; }
+.animate-delay-3 { animation-delay: 0.6s; }

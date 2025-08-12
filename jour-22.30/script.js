@@ -1,4 +1,4 @@
-document.addEventListener('', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Citations 
     const quotes = [
         {
@@ -91,9 +91,12 @@ document.addEventListener('', function() {
         
         function typing() {
             if (i < text.length) {
-                element.textContent += text.charAt(i);
-                i++;
-                typingTimeout = setTimeout(typing, speed);
+                if (quoteText) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    typingTimeout = setTimeout(typing, speed);
+                    quoteText.style.animation = 'pulse 5s ease infinite';
+                }
             } else {
                 isTyping = false;
                 element.classList.remove('typing'); // Retire la classe du curseur
@@ -264,7 +267,7 @@ window.addEventListener('scroll', () => {
     animateProgressBars();
 });
 
-    // Animation for timeline items
+// Animation des timeline items
 function animateTimelineItems() {
     const timelineItems = document.querySelectorAll('.timeline-item');
     
@@ -385,7 +388,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Welcome Animation
-document.addEventListener('', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const welcomeAnimation = document.getElementById('welcomeAnimation');
     
     // Affiche l'animation pendant 2 secondes
@@ -449,7 +452,7 @@ window.addEventListener('load', () => {
 });
 
 // Latest-Project
-document.addEventListener('', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.testimonial-carousel');
     const cards = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.dot');
@@ -522,7 +525,7 @@ document.addEventListener('', function() {
     carousel.addEventListener('mouseleave', startAutoSlide);
 });
 
-document.addEventListener('', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Initialisation des tooltips Bootstrap
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -560,26 +563,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sélectionne tous les accordéons
     const accordions = document.querySelectorAll('.mobile-accordion');
     
+    function handleAccordionClick() {
+        this.classList.toggle('active');
+        
+        accordions.forEach(otherAccordion => {
+            if (otherAccordion !== this) {
+                otherAccordion.classList.remove('active');
+            }
+        });
+    }
+
     // Ajoute le click handler seulement sur mobile
+    // function setupAccordions() {
+    //     if (window.innerWidth < 768) {
+    //         accordions.forEach(accordion => {
+    //             accordion.addEventListener('click', function() {
+    //                 this.classList.toggle('active');
+                    
+    //                 // Ferme les autres accordéons
+    //                 accordions.forEach(otherAccordion => {
+    //                     if (otherAccordion !== this) {
+    //                         otherAccordion.classList.remove('active');
+    //                     }
+    //                 });
+    //             });
+    //         });
+    //     } else {
+    //         // Sur desktop, on désactive le comportement accordéon
+    //         accordions.forEach(accordion => {
+    //             accordion.classList.remove('active');
+    //             accordion.removeEventListener('click');
+    //         });
+    //     }
+    // }
+
     function setupAccordions() {
         if (window.innerWidth < 768) {
             accordions.forEach(accordion => {
-                accordion.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    
-                    // Ferme les autres accordéons
-                    accordions.forEach(otherAccordion => {
-                        if (otherAccordion !== this) {
-                            otherAccordion.classList.remove('active');
-                        }
-                    });
-                });
+                accordion.addEventListener('click', handleAccordionClick);
             });
         } else {
-            // Sur desktop, on désactive le comportement accordéon
             accordions.forEach(accordion => {
                 accordion.classList.remove('active');
-                accordion.removeEventListener('click');
+                accordion.removeEventListener('click', handleAccordionClick);
             });
         }
     }
