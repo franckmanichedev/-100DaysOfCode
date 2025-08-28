@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer - FM Dev</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>#Day31 - Pomodoro Timer</h1>
+        
+        <div class="theme-toggle">
+            <button id="themeBtn">🌙 Mode Sombre</button>
+        </div>
+        
+        <div class="controls">
+            <div class="time-controls">
+                <div class="time-set">
+                    <label for="workTime">Travail (min):</label>
+                    <input type="number" id="workTime" min="1" max="60" value="25">
+                </div>
+                <div class="time-set">
+                    <label for="breakTime">Pause (min):</label>
+                    <input type="number" id="breakTime" min="1" max="30" value="5">
+                </div>
+            </div>
+            
+            <div class="timer-display">
+                <div class="timer" id="timer">25:00</div>
+                <div class="phase" id="phase">Prêt à travailler</div>
+            </div>
+            
+            <div class="buttons">
+                <button id="startBtn">Démarrer</button>
+                <button id="pauseBtn" disabled>Pause</button>
+                <button id="resetBtn" disabled>Réinitialiser</button>
+            </div>
+        </div>
+        
+        <div class="cycles">
+            <p>Cycles complétés: <span id="cycleCount">0</span></p>
+        </div>
+    </div>
+    
+    <audio id="alarm" src="alarm.mp3" preload="auto"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo Pro - FM Dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main class="weather-app animate__animated animate__fadeIn">
+            <header class="app-header">
+                <h1 class="app-title"><i class="bi bi-cloud-sun-fill"></i> Météo Pro - #Day33</h1>
+                <button id="locationBtn" class="location-btn">
+                    <i class="bi bi-geo-alt-fill"></i> Ma position
+                </button>
+            </header>
+
+            <section id="error-message" class="error-message">
+                Ville non trouvée ou orthographe incorrecte...
+            </section>
+
+            <section class="search-section">
+                <div class="search-group">
+                    <input type="text" id="cityInput" placeholder="Entrez une ville..." spellcheck="false">
+                    <button id="searchBtn" class="search-btn">
+                        <i class="bi bi-search"></i> Chercher
+                    </button>
+                </div>
+                <div class="unit-toggle">
+                    <button class="unit-btn active" data-unit="metric">°C</button>
+                    <button class="unit-btn" data-unit="imperial">°F</button>
+                </div>
+            </section>
+
+            <section id="weather-info" class="current-weather">
+                <div class="location-info">
+                    <h2 id="cityName">--</h2>
+                    <span id="currentDate">--</span>
+                </div>
+
+                <div class="weather-main">
+                    <div class="weather-icon">
+                        <img id="weatherIcon" src="" alt="Weather icon">
+                        <span id="weatherDescription">--</span>
+                    </div>
+                    <div class="temperature">
+                        <span id="currentTemp">--</span>
+                        <span id="feelsLike">Ressenti: --</span>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <i class="bi bi-thermometer-high"></i>
+                        <span id="tempMax">Max: --</span>
+                    </div>
+                    <div class="detail-card">
+                        <i class="bi bi-thermometer-low"></i>
+                        <span id="tempMin">Min: --</span>
+                    </div>
+                    <div class="detail-card">
+                        <i class="bi bi-droplet-fill"></i>
+                        <span id="humidity">Humidité: --</span>
+                    </div>
+                    <div class="detail-card">
+                        <i class="bi bi-wind"></i>
+                        <span id="windSpeed">Vent: --</span>
+                    </div>
+                    <div class="detail-card">
+                        <i class="bi bi-eye-fill"></i>
+                        <span id="visibility">Visibilité: --</span>
+                    </div>
+                    <div class="detail-card">
+                        <i class="bi bi-speedometer2"></i>
+                        <span id="pressure">Pression: --</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="weather-forecast">
+                <h3 class="forecast-title">Prévisions sur 5 jours</h3>
+                <div id="forecastContainer" class="forecast-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

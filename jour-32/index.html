@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Avancée - FM Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="animate__animated animate__fadeIn">#Day32 - To-Do List Avancée</h1>
+        
+        <div class="input-group animate__animated animate__fadeIn animate__delay-1s">
+            <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche..." autofocus>
+            <button id="addBtn">Ajouter</button>
+        </div>
+        
+        <div class="filters animate__animated animate__fadeIn animate__delay-1s">
+            <button class="filter-btn active" data-filter="all">Toutes</button>
+            <button class="filter-btn" data-filter="active">Actives</button>
+            <button class="filter-btn" data-filter="completed">Complétées</button>
+        </div>
+        
+        <ul id="taskList" class="task-list"></ul>
+        
+        <div class="actions animate__animated animate__fadeIn animate__delay-2s">
+            <span id="taskCounter" class="task-count">0 tâche(s) restante(s)</span>
+            <button id="clearBtn" class="clear-btn">Supprimer les complétées</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

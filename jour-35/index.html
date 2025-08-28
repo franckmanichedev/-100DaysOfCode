@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Générateur Pro de QR Code - FM Dev</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1><i class="fas fa-qrcode"></i> Générateur Pro QR - #Day35</h1>
+      <p>Créez des QR Codes personnalisés en quelques secondes</p>
+    </div>
+
+    <div class="form-container">
+      <div class="input-group">
+        <label for="qr-content">Contenu du QR Code</label>
+        <input type="text" id="qr-content" placeholder="Entrez une URL ou du texte..." spellcheck="false">
+      </div>
+
+      <div class="input-group">
+        <label for="qr-size">Taille du QR Code</label>
+        <select id="qr-size">
+          <option value="200x200">Petit (200x200)</option>
+          <option value="300x300" selected>Moyen (300x300)</option>
+          <option value="400x400">Grand (400x400)</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Couleur du QR Code</label>
+        <div class="color-options">
+          <div class="color-option active" style="background: #000000;" data-color="000000"></div>
+          <div class="color-option" style="background: #4361ee;" data-color="4361ee"></div>
+          <div class="color-option" style="background: #3a0ca3;" data-color="3a0ca3"></div>
+          <div class="color-option" style="background: #f72585;" data-color="f72585"></div>
+          <div class="color-option" style="background: #4cc9f0;" data-color="4cc9f0"></div>
+          <div class="color-option" style="background: #7209b7;" data-color="7209b7"></div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="qr-logo">Logo central (optionnel)</label>
+        <input type="file" id="qr-logo" accept="image/*" style="display: none;">
+        <button type="button" id="logo-upload-btn" class="btn btn-secondary" style="margin-top: 5px;">
+          <i class="fas fa-upload"></i> Choisir un logo
+        </button>
+        <small id="logo-filename" style="display: block; margin-top: 5px; color: #666; font-size: 0.8rem;"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="logo-size">Taille du logo</label>
+        <select id="logo-size">
+          <option value="0.2">Petit (20%)</option>
+          <option value="0.3" selected>Moyen (30%)</option>
+          <option value="0.4">Grand (40%)</option>
+        </select>
+      </div>
+
+      <button id="generate-btn" class="btn">
+        <i class="fas fa-qrcode"></i> Générer QR Code
+      </button>
+    </div>
+
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <p>Génération en cours...</p>
+    </div>
+
+    <div class="qr-result" id="qr-result">
+      <h3>Votre QR Code</h3>
+      <div class="qr-code">
+        <img id="qr-image" src="" alt="QR Code">
+      </div>
+      <div class="action-btns">
+        <button id="download-btn" class="btn">
+          <i class="fas fa-download"></i> Télécharger
+        </button>
+        <button id="share-btn" class="btn btn-secondary">
+          <i class="fas fa-share-alt"></i> Partager
+        </button>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Générateur QR Code &copy; 2025 | Par FM Dev</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
